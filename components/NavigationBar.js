@@ -29,6 +29,7 @@ const NavBarComponent = () => {
                                     <ButtonComponent buttonNavigate="/" buttonName="HOME" />
                                     <ButtonComponent buttonNavigate="/projects" buttonName="PROJECTS" />
                                     <ButtonComponent buttonNavigate="/education" buttonName="EDUCATION" />
+                                    <ButtonComponent buttonNavigate="/work" buttonName="WORK" />
                                 </div>
                             </Toolbar>
                         </AppBar>
@@ -52,12 +53,12 @@ const ButtonComponent = ({ buttonNavigate, buttonName }) => {
     return (
         <Link href={buttonNavigate}>
             {active ?
-                <Button sx={{ borderBottom: "2px solid", borderRadius: "0", fontSize: "16px", marginRight: "3%", paddingRight: "1%", paddingLeft: "1%", color:"#fc5c7d" }}>
-                    <Typography variant="button" color="#fc5c7d" sx={{ fontFamily: "Source Sans Pro", fontWeight: "bold" }}>{buttonName}</Typography>
+                <Button color="primary" sx={{ borderBottom: "2px solid", borderRadius: "0", fontSize: "16px", marginRight: "3%", paddingRight: "1%", paddingLeft: "1%" }}>
+                    <Typography variant="button" sx={{ fontFamily: "Source Sans Pro", fontWeight: "bold" }}>{buttonName}</Typography>
                 </Button>
             :
                 <Button sx={{ "&:hover": { color:"#6a82fb", borderBottom: "2px solid", borderRadius: "0" }, marginRight: "3%", paddingRight: "1%", paddingLeft: "1%" }}>
-                    <Typography variant="button" sx={{ fontFamily: "Source Sans Pro", fontWeight: "bold", color: "#6a82fb" }}>{buttonName}</Typography>
+                    <Typography variant="button" color="secondary" sx={{ fontFamily: "Source Sans Pro", fontWeight: "bold" }}>{buttonName}</Typography>
                 </Button>
             }
         </Link>

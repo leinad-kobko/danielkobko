@@ -4,7 +4,6 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import me from '../images/me2.png'
-import github from '../icons/GitHub_Logo.png'
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
           justifyContent="center"
         >
           <Grid item 
-            xs={0}
+            xs={12}
             md={6}
             display="flex"
             justifyContent="center"
@@ -32,18 +31,21 @@ export default function Home() {
               height={780*0.5}
             />
           </Grid>
-          <Grid container
+          <Grid item
             xs={12}
             md={6}
             display="flex"
+            flexDirection={"column"}
             justifyContent="center"
           >
             <Grid item
               display="flex"
               flexDirection="column"
+              marginLeft={"auto"}
+              marginRight={"auto"}
             >
-              <Typography whiteSpace="nowrap" variant="h2" fontFamily={"Courier"} color="primary">{"Hello World."}</Typography>
-              <Typography whiteSpace="nowrap" variant="h2" color="primary">{"I'm Daniel Kobko"}</Typography>
+              <Typography marginLeft={"10px"} variant="h3" fontFamily={"Courier"} color="primary">{"Hello World."}</Typography>
+              <Typography marginLeft={"10px"} variant="h3" color="primary">{"I'm Daniel Kobko"}</Typography>
             </Grid>
             <Grid container
               paddingTop="5%"
