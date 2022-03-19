@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, AppBar, Toolbar, Button, Fade, Menu, MenuItem, IconButton, Typography } from "@mui/material";
+import { Icon, SvgIcon, Box, AppBar, Toolbar, Button, Fade, Menu, MenuItem, IconButton, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-// import { useWidth } from "../context/WidthContext";
-// import background from "./bg.webp"
+import Image from "next/image";
+import me from '../images/me2.png'
+import dk from '../icons/dk.png'
 
 const NavBarComponent = () => {
     // const { width } = useWidth();
@@ -25,7 +26,21 @@ const NavBarComponent = () => {
                     <Box sx={{flexGrow: 1, position: "absolute", top: "0", left: "0", width: "100%", marginTop: "0%"}}>
                         <AppBar position="static" sx={{boxShadow: "none", backgroundColor: "rgba(0, 0, 0, 0)", color: "rgb(255, 255, 100)"}}>
                             <Toolbar>
-                                <div style={{ marginLeft: "5%", width: "100%", display: "flex", justifyContent: "center" }}>
+                                <div style={{ width: "20%", marginLeft: "15%", display: "flex", alignItems: "center"}}>
+                                    <Link href="/">
+                                        <Button>
+                                            <Image
+                                                alt="DK"
+                                                src={dk}
+                                                layout="intrinsic"
+                                                width={900*0.05}
+                                                height={900*0.05}
+                                                
+                                            />
+                                        </Button>
+                                    </Link>
+                                </div>
+                                <div style={{ width: "55%", display: "flex", justifyContent: "flex-end" }}>
                                     <ButtonComponent buttonNavigate="/" buttonName="HOME" />
                                     <ButtonComponent buttonNavigate="/projects" buttonName="PROJECTS" />
                                     <ButtonComponent buttonNavigate="/education" buttonName="EDUCATION" />
@@ -53,12 +68,12 @@ const ButtonComponent = ({ buttonNavigate, buttonName }) => {
     return (
         <Link href={buttonNavigate}>
             {active ?
-                <Button color="primary" sx={{ borderBottom: "2px solid", borderRadius: "0", fontSize: "16px", marginRight: "3%", paddingRight: "1%", paddingLeft: "1%" }}>
-                    <Typography variant="button" sx={{ fontFamily: "Source Sans Pro", fontWeight: "bold" }}>{buttonName}</Typography>
+                <Button sx={{ color: "#FFFFFF", borderBottom: "2px solid", borderRadius: "0", fontSize: "16px", marginRight: "3%", paddingRight: "1%", paddingLeft: "1%"}}>
+                    <Typography variant="button" color="#FFFFFF" sx={{ fontFamily: "Source Sans Pro", fontWeight: "bold" }}>{buttonName}</Typography>
                 </Button>
             :
-                <Button sx={{ "&:hover": { color:"#6a82fb", borderBottom: "2px solid", borderRadius: "0" }, marginRight: "3%", paddingRight: "1%", paddingLeft: "1%" }}>
-                    <Typography variant="button" color="secondary" sx={{ fontFamily: "Source Sans Pro", fontWeight: "bold" }}>{buttonName}</Typography>
+                <Button sx={{ "&:hover": { color:"#FFFFFF", borderBottom: "2px solid", borderRadius: "0" }, marginRight: "3%", paddingRight: "1%", paddingLeft: "1%" }}>
+                    <Typography variant="button" color="#FFFFFF" sx={{ fontFamily: "Source Sans Pro", fontWeight: "bold" }}>{buttonName}</Typography>
                 </Button>
             }
         </Link>

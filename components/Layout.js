@@ -1,4 +1,4 @@
-import {Typography} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { red, brown } from '@mui/material/colors';
 // import NavBar from "./NavBar"
@@ -26,14 +26,25 @@ export default function Layout({ children }) {
                     top: "0", left: "0", 
                     width: "100%",
                     minHeight: "100%", 
-                    background: "#e6f3f8",
+                    background: "linear-gradient(to right top, #fc5c7d, #6a82fb)",
+                    display:"flex",
+                    justifyContent:"center"
                 }}>
                         <Head>
                             <meta name="description" content="A personal portfolio website for Daniel Kobko." />
                             <link rel="icon" href="/favicon.ico" />
                         </Head>
                         <NavigationBar/>
-                        <>{children}</>
+                        <Box 
+                            width="75%" 
+                            marginTop="12vh"
+                            marginBottom="12vh"
+                            backgroundColor="#F5F5F5"
+                            borderRadius={5}
+                            // boxShadow="0px 10px 20px 0px white"
+                        >
+                            <>{children}</>
+                        </Box>
             </div>
         </ThemeProvider>
     )

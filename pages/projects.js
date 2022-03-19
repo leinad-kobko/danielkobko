@@ -29,13 +29,17 @@ export default function Projects() {
             display="flex"
             justifyContent="center"
           >
-            <Image
-              alt="me.png"
-              src={github}
-              layout="intrinsic"
-              width={900*0.3}
-              height={900*0.3}
-            />
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/leinad-kobko">
+              <Button>
+                <Image
+                  alt="me.png"
+                  src={github}
+                  layout="intrinsic"
+                  width={900*0.3}
+                  height={900*0.3}
+                />
+              </Button>
+            </a>
           </Grid>
           <Grid item
             xs={12}
@@ -44,7 +48,7 @@ export default function Projects() {
             justifyContent="center"
             alignItems={"center"}
           >
-            <Box width="70%" padding="2%" border="1px solid" color="#6a82fb">
+            <Box width="70%" padding="2%">
               <Carousel 
               autoPlay={false} 
               navButtonsAlwaysVisible={true} 
@@ -70,11 +74,11 @@ export default function Projects() {
                       />
                     </Grid>
                     <Grid item display="flex" alignItems="center">
-                      <Link href="https://github.com/leinad-kobko/pacman-qlearning">
+                      <a target="_blank" rel="noopener noreferrer" href="https://github.com/leinad-kobko/pacman-qlearning">
                         <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
                           <Typography variant="h5" color="#FFFFFF">Pacman AI</Typography>
                         </Button>
-                      </Link>
+                      </a>
                     </Grid>
                   </Grid>
                 </div>
@@ -98,11 +102,11 @@ export default function Projects() {
                       />
                     </Grid>
                     <Grid item display="flex" alignItems="center">
-                      <Link href="https://github.com/leinad-kobko/genetic-car-algorithm">
+                      <a target="_blank" rel="noopener noreferrer" href="https://github.com/leinad-kobko/genetic-car-algorithm">
                         <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
                           <Typography variant="h5" color="#FFFFFF">Evolving Cars</Typography>
                         </Button>
-                      </Link>
+                      </a>
                     </Grid>
                   </Grid>
                 </div>
@@ -126,11 +130,11 @@ export default function Projects() {
                       />
                     </Grid>
                     <Grid item>
-                      <Link href="https://github.com/leinad-kobko/gpx-data-viewer">
+                      <a target="_blank" rel="noopener noreferrer" href="https://github.com/leinad-kobko/gpx-data-viewer">
                         <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
                           <Typography variant="h5" color="#FFFFFF">GPX Viewer</Typography>
                         </Button>
-                      </Link>
+                      </a>
                     </Grid>
                   </Grid>
                 </div>
@@ -154,11 +158,11 @@ export default function Projects() {
                       />
                     </Grid>
                     <Grid item>
-                      <Link href="https://github.com/leinad-kobko/guelph-utility-engine">
+                      <a target="_blank" rel="noopener noreferrer" href="https://github.com/leinad-kobko/guelph-utility-engine">
                         <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
                           <Typography variant="h5" color="#FFFFFF">Guelph Utility</Typography>
                         </Button>
-                      </Link>
+                      </a>
                     </Grid>
                   </Grid>
                 </div>

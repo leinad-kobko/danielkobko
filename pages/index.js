@@ -4,6 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import me from '../images/me2.png'
+import { GitHub, LinkedIn, Email, Mail } from "@mui/icons-material";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       </Head>
       <Box>
         <Grid container
-          paddingTop="10%"
+          paddingTop="5vh"
           display="flex"
           justifyContent="center"
         >
@@ -27,8 +28,8 @@ export default function Home() {
               alt="me.png"
               src={me}
               layout="intrinsic"
-              width={776*0.5}
-              height={780*0.5}
+              width={776*0.4}
+              height={780*0.4}
             />
           </Grid>
           <Grid item
@@ -55,25 +56,19 @@ export default function Home() {
               justifyContent="center"
             >
               <Grid item>
-                <Link href="https://github.com/leinad-kobko/">
-                  <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
-                    Github
-                  </Button>
-                </Link>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/leinad-kobko">
+                  <GitHub fontSize="large" color="secondary"/>
+                </a>
               </Grid>
               <Grid item>
-                <Link href="https://www.linkedin.com/in/daniel-kobko-19a785176/">
-                  <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
-                    LINKEDIN
-                  </Button>
-                </Link>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/daniel-kobko-19a785176/">
+                  <LinkedIn fontSize="large" color="secondary"/>
+                </a>
               </Grid>
               <Grid item>
-                <Link href="mailto:danielkobko@gmail.com">
-                  <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
-                    EMAIL
-                  </Button>
-                </Link>
+                <a a target="_blank" rel="noopener noreferrer" href="mailto:danielkobko@gmail.com">
+                  <Mail fontSize="large" color="secondary"/>
+                </a>
               </Grid>
             </Grid>
           </Grid>
