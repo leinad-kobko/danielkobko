@@ -48,7 +48,8 @@ export default function Projects() {
               <Carousel 
               autoPlay={false} 
               navButtonsAlwaysVisible={true} 
-              sx={{height: "30vh"}}
+              sx={{minHeight: "30vh"}}
+              indicators={false}
               >
                 <div>
                   <Grid container 
@@ -57,6 +58,7 @@ export default function Projects() {
                   justifyContent={"center"} 
                   alignItems={"center"} 
                   spacing={3}
+                  minHeight="30vh"
                   >
                     <Grid item display="flex" alignItems="center">
                       <Image
@@ -67,8 +69,8 @@ export default function Projects() {
                         height={400*0.1}
                       />
                     </Grid>
-                    <Grid item>
-                      <Link href="https://github.com/leinad-kobko/">
+                    <Grid item display="flex" alignItems="center">
+                      <Link href="https://github.com/leinad-kobko/pacman-qlearning">
                         <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
                           <Typography variant="h5" color="#FFFFFF">Pacman AI</Typography>
                         </Button>
@@ -83,7 +85,7 @@ export default function Projects() {
                   flexDirection="row" 
                   justifyContent={"center"} 
                   alignItems={"center"} 
-                  height="20vh"
+                  minHeight="30vh"
                   spacing={3}
                   >
                     <Grid item display="flex" alignItems="center">
@@ -95,8 +97,8 @@ export default function Projects() {
                         height={900*0.1}
                       />
                     </Grid>
-                    <Grid item>
-                      <Link href="https://github.com/leinad-kobko/">
+                    <Grid item display="flex" alignItems="center">
+                      <Link href="https://github.com/leinad-kobko/genetic-car-algorithm">
                         <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
                           <Typography variant="h5" color="#FFFFFF">Evolving Cars</Typography>
                         </Button>
@@ -111,7 +113,7 @@ export default function Projects() {
                   flexDirection="row" 
                   justifyContent={"center"} 
                   alignItems={"center"} 
-                  height="20vh"
+                  minHeight="30vh"
                   spacing={3}
                   >
                     <Grid item display="flex" alignItems="center">
@@ -124,7 +126,7 @@ export default function Projects() {
                       />
                     </Grid>
                     <Grid item>
-                      <Link href="https://github.com/leinad-kobko/">
+                      <Link href="https://github.com/leinad-kobko/gpx-data-viewer">
                         <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
                           <Typography variant="h5" color="#FFFFFF">GPX Viewer</Typography>
                         </Button>
@@ -139,7 +141,7 @@ export default function Projects() {
                   flexDirection="row" 
                   justifyContent={"center"} 
                   alignItems={"center"} 
-                  height="20vh"
+                  minHeight="30vh"
                   spacing={3}
                   >
                     <Grid item display="flex" alignItems="center">
@@ -152,7 +154,7 @@ export default function Projects() {
                       />
                     </Grid>
                     <Grid item>
-                      <Link href="https://github.com/leinad-kobko/">
+                      <Link href="https://github.com/leinad-kobko/guelph-utility-engine">
                         <Button size="large" type="submit" variant="contained" sx={{background: "linear-gradient(to right bottom, #fc5c7d, #6a82fb)"}}>
                           <Typography variant="h5" color="#FFFFFF">Guelph Utility</Typography>
                         </Button>

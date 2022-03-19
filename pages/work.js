@@ -62,7 +62,7 @@ export default function Work() {
                             </Typography>
                             <br/>
                             <Typography>
-                                <b>Still not sold? This entire website was made within 24 hours and was 100% my own work!</b>
+                                <b>Still not sold? This entire website was made within 24 hours!</b>
                             </Typography>
                         </CardContent> 
                     </Card>
