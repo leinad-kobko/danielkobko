@@ -5,8 +5,11 @@ import Head from "next/head";
 import Image from "next/image";
 import me from '../images/me2.png'
 import { GitHub, LinkedIn, Email, Mail } from "@mui/icons-material";
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 export default function Home() {
+  const smallScreen = useMediaQuery('(min-width:600px)');
   return (
     <Layout>
       <Head>
@@ -23,6 +26,7 @@ export default function Home() {
             md={6}
             display="flex"
             justifyContent="center"
+            padding="10%"
           >
             <Image
               alt="me.png"
@@ -45,8 +49,23 @@ export default function Home() {
               marginLeft={"auto"}
               marginRight={"auto"}
             >
-              <Typography marginLeft={"10px"} variant="h3" fontFamily={"Courier"} color="primary">{"Hello World."}</Typography>
-              <Typography marginLeft={"10px"} variant="h3" color="primary">{"I'm Daniel Kobko"}</Typography>
+              <Typography 
+                marginLeft={"10px"} 
+                variant="h3" 
+                fontFamily={"Courier"} 
+                color="primary"
+                fontSize={smallScreen ? 50 : 30}
+              >
+                  {"Hello World."}
+                </Typography>
+              <Typography 
+                marginLeft={"10px"} 
+                variant="h3"
+                color="primary"
+                fontSize={smallScreen ? 50 : 30}
+                >
+                  {"I'm Daniel Kobko"}
+                </Typography>
             </Grid>
             <Grid container
               paddingTop="5%"

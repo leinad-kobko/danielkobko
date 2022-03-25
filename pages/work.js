@@ -3,14 +3,16 @@ import Head from "next/head";
 import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import cibc from "../icons/cibc.png"
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function Work() {
+    const smallScreen = useMediaQuery('(min-width:600px)');
   return (
     <Layout>
       <Head>
         <title>Work - Daniel Kobko</title>
       </Head>
-      <Box marginTop="60px" width="50%" minWidth="350px" marginLeft="auto" marginRight="auto">
+      <Box marginTop="60px" width={smallScreen?"50%":"100%"} marginLeft="auto" marginRight="auto">
         <Grid container display="flex" flexDirection="column" spacing={3}>
             <Grid item paddingBottom="2%">
                 <Box color="#fc5c7d" borderTop="8px solid" >
