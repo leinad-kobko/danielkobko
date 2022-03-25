@@ -28,7 +28,7 @@ const NavBarComponent = () => {
                     <Box sx={{flexGrow: 1, position: "absolute", top: "0", left: "0", width: "100%", marginTop: "0%"}}>
                         <AppBar position="static" sx={{boxShadow: "none", backgroundColor: "rgba(0, 0, 0, 0)", color: "rgb(255, 255, 100)"}}>
                             <Toolbar>
-                                <div style={{ width: "20%", marginLeft: "15%", display: "flex", alignItems: "center"}}>
+                                <div style={{ width: "20%", marginLeft: "2%", display: "flex", alignItems: "center"}}>
                                     <Link href="/">
                                         <Button>
                                             <Image
@@ -41,7 +41,7 @@ const NavBarComponent = () => {
                                         </Button>
                                     </Link>
                                 </div>
-                                <div style={{ width: "55%", display: "flex", justifyContent: "flex-end" }}>
+                                <div style={{ width: "75%", display: "flex", justifyContent: "flex-end" }}>
                                     <ButtonComponent buttonNavigate="/" buttonName="HOME" />
                                     <ButtonComponent buttonNavigate="/projects" buttonName="PROJECTS" />
                                     <ButtonComponent buttonNavigate="/education" buttonName="EDUCATION" />

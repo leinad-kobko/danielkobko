@@ -36,9 +36,9 @@ export default function Layout({ children }) {
                         </Head>
                         <NavigationBar/>
                         <Box 
-                            width="75%" 
+                            width="95%" 
                             marginTop="12vh"
-                            marginBottom="12vh"
+                            marginBottom="5vh"
                             backgroundColor="#F5F5F5"
                             borderRadius={5}
                             // boxShadow="0px 10px 20px 0px white"

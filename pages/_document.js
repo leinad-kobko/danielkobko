@@ -10,6 +10,7 @@ const Document = () => (
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
+            <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
         </Head>
         <body>
             <Main />
