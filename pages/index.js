@@ -13,6 +13,7 @@ import SocialsCardMobile from "../components/SocialsCardMobile";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Education from "../components/Education";
 import Work from "../components/Work";
+import TitleBar from "../components/TitleBar";
 import Carousel, { CarouselItem } from "../components/Carousel";
 
 export default function Home() {
@@ -38,7 +39,7 @@ export default function Home() {
     const slides = [
         {title: "About Me", content: "I'm a 3rd year Bachelor of Computing student at the University of Guelph. Currently I do software development but hope to get into data science."},
         {title: "Skills", content: "I know Python, JS, and C. During my schooling, I have also worked with databases, cryptography, and AI."},
-        {title: "Hobbies", content: "I'm a 3rd year Bachelor of Computing student at the University of Guelph. Currently I do software development but hope to get into data science."},
+        {title: "Hobbies", content: "I like playing games, drawing, working out, and coding small side projects to improve my skills. I am also trying to use LeetCode."},
     ];
 
     const smallScreen = useMediaQuery('(min-width:1025px)');
@@ -59,21 +60,22 @@ export default function Home() {
                 <div id="card-area" className="flex justify-center w-full">
                     {smallScreen ? <SocialsCard/> : <SocialsCardMobile/>}
                 </div>
-                <div id="content" className="flex flex-col md:w-1/2 md:max-w-1/2 items-center">
-                    <div>
-                        <Carousel>
-                            {slides.map((slide) => {
-                                return (
-                                    <CarouselItem>
-                                        <p className="text-xl font-bold text-red-400">{slide.title}</p>
-                                        <p>{slide.content}</p>
-                                    </CarouselItem>
-                                );
-                            })}
-                        </Carousel>
-                        <Education/>
-                        <Work/>
-                    </div>
+                <div id="content" className="flex flex-col md:w-1/2 md:max-w-1/2 justify-center items-center">
+                    <TitleBar>A Little About Me</TitleBar>
+                    <Carousel>
+                        {slides.map((slide) => {
+                            return (
+                                <CarouselItem key={slide}>
+                                    <p className="text-xl font-bold text-red-400">{slide.title}</p>
+                                    <p>{slide.content}</p>
+                                </CarouselItem>
+                            );
+                        })}
+                    </Carousel>
+                    <TitleBar>Education</TitleBar>
+                    <Education/>
+                    <TitleBar>Work Experience</TitleBar>
+                    <Work/>
                 </div>
             </div>
         </Layout>

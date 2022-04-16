@@ -29,7 +29,7 @@ const NavBarComponent = () => {
                         <AppBar position="static" sx={{boxShadow: "none", backgroundColor: "rgba(0, 0, 0, 0)", color: "rgb(255, 255, 100)"}}>
                             <Toolbar>
                                 <div style={{ width: "20%", marginLeft: "15%", display: "flex", alignItems: "center"}}>
-                                    <Link href="/">
+                                    <Link href="/" passHref>
                                         <Button>
                                             <Image
                                                 alt="DK"
@@ -57,7 +57,7 @@ const NavBarComponent = () => {
                         <AppBar position="static" sx={{ background: "transparent", boxShadow: "none" }}>
                             <Toolbar sx={{ marginTop: "2%" }}>
                                 <div style={{ width: "20%", marginLeft: "3%", display: "flex", alignItems: "center"}}>
-                                    <Link href="/">
+                                    <Link href="/" passHref>
                                         <Button>
                                             <Image
                                                 alt="DK"
@@ -98,7 +98,7 @@ const ButtonComponent = ({ buttonNavigate, buttonName }) => {
     }
 
     return (
-        <Link href={buttonNavigate}>
+        <Link href={buttonNavigate} passHref>
             {active ?
                 <Button sx={{ color: "#FFFFFF", borderBottom: "2px solid", borderRadius: "0", fontSize: "16px", marginRight: "3%", paddingRight: "1%", paddingLeft: "1%"}}>
                     <Typography variant="button" color="#FFFFFF" sx={{ fontFamily: "Source Sans Pro", fontWeight: "bold" }}>{buttonName}</Typography>
@@ -125,13 +125,13 @@ const MenuItemComponent = ({ menuItemNavigate, menuItemName }) => {
         <>
             {active ?
                 <MenuItem sx={{ "&:hover": {backgroundColor: "#6a82fb"}, backgroundColor: "#6a82fb", fontFamily: "Source Sans Pro", fontSize: "20px" }}>
-                    <Link href={menuItemNavigate}>
+                    <Link href={menuItemNavigate} passHref>
                         {menuItemName}
                     </Link>
                 </MenuItem>
             :
                 <MenuItem sx={{ "&:hover": {backgroundColor: "#6a82fb"}, fontFamily: "Source Sans Pro", fontSize: "20px" }}>
-                    <Link href={menuItemNavigate}>
+                    <Link href={menuItemNavigate} passHref>
                         {menuItemName}
                     </Link>
                 </MenuItem>

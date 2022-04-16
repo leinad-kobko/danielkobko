@@ -36,7 +36,7 @@ const Carousel = ({children}) => {
     });
 
     return (
-        <>
+        <div>
             <div id="carousel" className="overflow-hidden bg-gradient-to-bl from-blue-100 to-red-100">
                 <div 
                 id="carousel-inner" 
@@ -56,7 +56,7 @@ const Carousel = ({children}) => {
                 </button>
                 {React.Children.map(children, (child, index) => {
                     return (
-                        <button className={"m-5"  + (index === slideIndex ? " font-bold" : "")}
+                        <button style={{color: secondary_colour}} className={"m-5"  + (index === slideIndex ? " font-bold" : "")}
                             onClick={() => {
                                 updateIndex(index)
                             }}
@@ -69,7 +69,7 @@ const Carousel = ({children}) => {
                     <FaChevronCircleRight size="30" color={secondary_colour} className={buttoneffects + " hover:cursor-pointer"}/>
                 </button>
             </div>
-        </>
+        </div>
     )
 }
 
