@@ -18,7 +18,7 @@ export default function Work() {
             location="Toronto, ON."
             timeFrame="Summer Co-op 2020 (Remote)"
         >
-            <p>Apply innovative thinking to create opportunities for better employment and improve company image, update an application to help with employee productivity. Time management, critical thinking as well as working productively. Work with multiple teams.</p>
+            <p>{"Apply innovative thinking to create opportunities for better employment and improve company image, update an application to help with employee productivity. Time management, critical thinking as well as working productively. Work with multiple teams."}</p>
         </InfoCard>
         <InfoCard
             img={dk}
@@ -27,7 +27,7 @@ export default function Work() {
             location="Location: Remote or Greater Ottawa Area"
             timeFrame="Summer 2022"
         >
-            <p>I'm looking to further develop my skills and help a team that is looking for a creative, efficient, and hard-working employee</p>
+            <p>{"I'm looking to further develop my skills and help a team that is looking for a creative, efficient, and hard-working employee"}</p>
         </InfoCard>
     </>
   )

@@ -29,21 +29,21 @@ const SocialsCard = () => {
                 </div>
                 <div id="socials" className="w-1/2 py-10 h-full bg-white">
                     <Grid container>
-                            <LinkButton href="https://github.com/leinad-kobko">
-                                <DiGithubBadge size="60" color={secondary_colour} className={buttoneffects}/>
+                        <LinkButton href="https://github.com/leinad-kobko">
+                            <DiGithubBadge size="60" color={secondary_colour} className={buttoneffects}/>
+                        </LinkButton>
+                        <LinkButton href="https://www.linkedin.com/in/daniel-kobko-19a785176/">
+                            <BsLinkedin size="35" color={secondary_colour} className={buttoneffects}/>
+                        </LinkButton>
+                        <LinkButton href="mailto:danielkobko@gmail.com">
+                                <HiMail size="50" color={secondary_colour} className={buttoneffects}/>
                             </LinkButton>
-                            <LinkButton href="https://www.linkedin.com/in/daniel-kobko-19a785176/">
-                                <BsLinkedin size="35" color={secondary_colour} className={buttoneffects}/>
-                            </LinkButton>
-                            <LinkButton href="mailto:danielkobko@gmail.com">
-                                    <HiMail size="50" color={secondary_colour} className={buttoneffects}/>
-                                </LinkButton>
-                            <LinkButton href="https://www.instagram.com/dankobko_/">
-                                <AiFillInstagram size="40" color={secondary_colour} className={buttoneffects}/>
-                            </LinkButton>
-                            {/* <LinkButton href="https://www.facebook.com/profile.php?id=100009351043044">
-                                <AiFillFacebook size="40" color={secondary_colour} className={buttoneffects}/>
-                            </LinkButton> */}
+                        <LinkButton href="https://www.instagram.com/dankobko_/">
+                            <AiFillInstagram size="40" color={secondary_colour} className={buttoneffects}/>
+                        </LinkButton>
+                        {/* <LinkButton href="https://www.facebook.com/profile.php?id=100009351043044">
+                            <AiFillFacebook size="40" color={secondary_colour} className={buttoneffects}/>
+                        </LinkButton> */}
                     </Grid>
                 </div>
             </div>
