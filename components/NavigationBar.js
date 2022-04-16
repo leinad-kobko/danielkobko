@@ -77,8 +77,6 @@ const NavBarComponent = () => {
                                 <Menu anchorEl={menuElement} open={open} onClose={handleClose}>
                                     <MenuItemComponent menuItemNavigate="/" menuItemName="Home" />
                                     <MenuItemComponent menuItemNavigate="/projects" menuItemName="Projects" />                                    
-                                    <MenuItemComponent menuItemNavigate="/work" menuItemName="Work" />                                    
-                                    <MenuItemComponent menuItemNavigate="/education" menuItemName="Education" />
                                 </Menu>
                             </Toolbar>
                         </AppBar>

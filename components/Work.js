@@ -51,17 +51,17 @@ export default function Work() {
                             display="flex"
                             flexDirection="column"
                             >
-                            <Typography color="primary" variant="h5">Looking for a Summer job 2022!</Typography>
+                            <Typography color="primary" variant="h5">Looking for a job in 2022!</Typography>
                             </Grid>
                         </Grid>
                         <br/>
                         <Typography>
                             {"I'm looking to further develop my skills and help a team that is looking for a creative, efficient, and hard-working employee"}
                         </Typography>
-                        <br/>
-                        <Typography>
+                        {/* <br/> */}
+                        {/* <Typography>
                             <b>Still not sold? This entire website was made within 24 hours!</b>
-                        </Typography>
+                        </Typography> */}
                     </CardContent> 
                 </Card>
             </Box>
