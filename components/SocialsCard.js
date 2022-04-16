@@ -14,7 +14,7 @@ const SocialsCard = () => {
 
     return (
         <>
-            <div id="me-card" className="w-1/2 bg-white flex flex-row">
+            <div id="me-card" className="mb-4 w-1/2 bg-white flex flex-row">
                 <div id="imageArea" className="w-1/2 py-10 h-full bg-gradient-to-bl from-blue-100 to-red-100 flex flex-col justify-center">
                     <Image
                         alt="me.png"
@@ -41,9 +41,9 @@ const SocialsCard = () => {
                             <LinkButton href="https://www.instagram.com/dankobko_/">
                                 <AiFillInstagram size="40" color={secondary_colour} className={buttoneffects}/>
                             </LinkButton>
-                            <LinkButton href="https://www.facebook.com/profile.php?id=100009351043044">
+                            {/* <LinkButton href="https://www.facebook.com/profile.php?id=100009351043044">
                                 <AiFillFacebook size="40" color={secondary_colour} className={buttoneffects}/>
-                            </LinkButton>
+                            </LinkButton> */}
                     </Grid>
                 </div>
             </div>

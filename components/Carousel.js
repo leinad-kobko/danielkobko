@@ -37,7 +37,7 @@ const Carousel = ({children}) => {
 
     return (
         <div>
-            <div id="carousel" className="overflow-hidden bg-gradient-to-bl from-blue-100 to-red-100">
+            <div id="carousel" className="mt-8 overflow-hidden bg-gradient-to-bl from-blue-100 to-red-100">
                 <div 
                 id="carousel-inner" 
                 className="ease-in duration-200 flex flex-row" 
@@ -72,28 +72,5 @@ const Carousel = ({children}) => {
         </div>
     )
 }
-
-{/* <div id="about-me-carousel" className="w-full px-10 h-48 my-10 flex flex-row">
-    <div 
-        id="left-button"  
-        className="w-fill flex items-center"
-    >
-        <FaChevronCircleLeft onClick={onLeftCarouselClick} size="30" color={secondary_colour} className={buttoneffects + " hover:cursor-pointer"}/>
-    </div>
-    <div id="carousel-content" className="px-10 overflow-auto">
-        {carouselSlide == 0 && 
-            <div className="w-fill flex flex-col items-center">
-                <p className="text-xl font-bold text-red-400">{slides[carouselSlide].title}</p>
-                <p>{slides[carouselSlide].content}</p>
-            </div>
-        }
-    </div>
-    <div 
-        id="right-button" 
-        className="w-fill flex items-center"
-    >
-        <FaChevronCircleRight size="30" onClick={onRightCarouselClick} color={secondary_colour} className={buttoneffects + " hover:cursor-pointer"}/>
-    </div>
-</div> */}
 
 export default Carousel;
