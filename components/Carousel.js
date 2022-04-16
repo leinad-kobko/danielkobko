@@ -36,7 +36,7 @@ const Carousel = ({children}) => {
     });
 
     return (
-        <div>
+        <div className="w-5/6">
             <div id="carousel" className="mt-8 overflow-hidden bg-gradient-to-bl from-blue-100 to-red-100">
                 <div 
                 id="carousel-inner" 

@@ -6,6 +6,7 @@ import { AiFillInstagram, AiFillFacebook } from 'react-icons/ai';
 import { DiGithubBadge } from 'react-icons/di';
 import { BsLinkedin } from 'react-icons/bs';
 import { HiMail } from 'react-icons/hi';
+import { SiLeetcode } from 'react-icons/si';
 import { Grid } from "@mui/material";
 
 const SocialsCard = () => {
@@ -41,9 +42,9 @@ const SocialsCard = () => {
                         <LinkButton href="https://www.instagram.com/dankobko_/">
                             <AiFillInstagram size="40" color={secondary_colour} className={buttoneffects}/>
                         </LinkButton>
-                        {/* <LinkButton href="https://www.facebook.com/profile.php?id=100009351043044">
-                            <AiFillFacebook size="40" color={secondary_colour} className={buttoneffects}/>
-                        </LinkButton> */}
+                        <LinkButton href="https://leetcode.com/danielkobko/">
+                            <SiLeetcode size="40" color={secondary_colour} className={buttoneffects}/>
+                        </LinkButton>
                     </Grid>
                 </div>
             </div>

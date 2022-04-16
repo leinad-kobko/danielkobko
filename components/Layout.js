@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css'
 import NavigationBar from './NavigationBar';
 import Head from 'next/head';
 import { Fade }  from "@mui/material";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const theme = createTheme({
   palette: {
@@ -18,7 +19,9 @@ const theme = createTheme({
   },
 });
 
+
 export default function Layout({ children }) {
+    const smallScreen = useMediaQuery('(min-width:900px)');
     return (
         <ThemeProvider theme={theme}>
             <div style={{
@@ -36,7 +39,7 @@ export default function Layout({ children }) {
                         </Head>
                         <NavigationBar/>
                         <Box 
-                            width="75%" 
+                            width={smallScreen ? "75%" : "90%"} 
                             marginTop="8vh"
                             marginBottom="5vh"
                             backgroundColor="#F5F5F5"

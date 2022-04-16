@@ -60,7 +60,7 @@ export default function Home() {
                 <div id="card-area" className="flex justify-center w-full">
                     {smallScreen ? <SocialsCard/> : <SocialsCardMobile/>}
                 </div>
-                <div id="content" className="flex flex-col md:w-1/2 md:max-w-1/2 justify-center items-center">
+                <div id="content" className="flex flex-col w-3/4 md:w-1/2 md:max-w-1/2 justify-center items-center">
                     <TitleBar>A Little About Me</TitleBar>
                     <Carousel>
                         {slides.map((slide) => {
