@@ -36,14 +36,25 @@ export default function Layout({ children }) {
                         </Head>
                         <NavigationBar/>
                         <Box 
-                            width="95%" 
-                            marginTop="12vh"
+                            width="75%" 
+                            marginTop="8vh"
                             marginBottom="5vh"
                             backgroundColor="#F5F5F5"
                             borderRadius={5}
-                            // boxShadow="0px 10px 20px 0px white"
+                            height="85vh"
                         >
-                            <>{children}</>
+                            <Box
+                                marginTop={"2vh"}
+                                width="98%"
+                                height="81vh"
+                                overflow="auto"
+                                sx={{
+                                     scrollbarColor: "#fc5c7d #F5F5F5",
+                                     scrollbarWidth: "thin" 
+                                    }}
+                            >
+                                {children}
+                            </Box>
                         </Box>
             </div>
         </ThemeProvider>
