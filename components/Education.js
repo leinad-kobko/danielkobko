@@ -11,6 +11,7 @@ const Education = () => {
     const smallScreen = useMediaQuery('(min-width:600px)');
     return (
       <>
+      
         <InfoCard
           img={guelph}
           dimensions={[900*0.1, 900*0.1]}
