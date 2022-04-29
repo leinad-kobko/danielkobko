@@ -16,7 +16,7 @@ const SocialsCard = () => {
     return (
         <>
             <div id="me-card" className="mb-4 w-1/2 bg-white flex flex-row">
-                <div id="imageArea" className="w-1/2 py-10 h-full bg-gradient-to-bl from-blue-100 to-red-100 flex flex-col justify-center">
+                <div id="imageArea" className="w-1/2 h-full bg-gradient-to-bl from-blue-100 to-red-100 flex flex-col justify-center">
                     <Image
                         alt="me.png"
                         src={me}
@@ -26,7 +26,7 @@ const SocialsCard = () => {
                         border="2px solid black"
                         className="object-contain"
                     />
-                    <p className="py-10 text-xl lg:text-2xl font-bold text-red-400 text-center">Software Developer</p>
+                    <p className="py-5 text-xl font-bold text-red-400 text-center">Software Developer</p>
                 </div>
                 <div id="socials" className="w-1/2 py-10 h-full bg-white">
                     <Grid container>

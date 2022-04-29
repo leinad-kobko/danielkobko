@@ -3,7 +3,7 @@ import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
 
 export const CarouselItem = ({children, width}) => {
     return (
-        <div id="carousel-item" className="inline-flex flex-col p-10 items-center justify-center h-52" style={{width: width}}>
+        <div id="carousel-item" className="inline-flex flex-col p-10 items-center justify-center" style={{width: width}}>
             {children}
         </div>
     );

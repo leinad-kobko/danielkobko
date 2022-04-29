@@ -40,7 +40,7 @@ export default function Layout({ children }) {
                         <NavigationBar/>
                         <Box 
                             width={smallScreen ? "75%" : "90%"} 
-                            marginTop="8vh"
+                            marginTop="10vh"
                             marginBottom="5vh"
                             backgroundColor="#F5F5F5"
                             borderRadius={5}
