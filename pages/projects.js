@@ -11,22 +11,13 @@ import pacman from "../icons/pacman.png";
 export default function Projects() {
     const projects = [
         {
-            img: dkred, 
-            dimensions: [900*0.1, 900*0.1],
-            title: "Portfolio Website", 
-            language: "JavaScript", 
-            date: "2022", 
-            description: "The personal portfolio website you're looking at. Built to show some of my skills with web development, and provide a pleasant view of all my achievements and skills.", 
-            link: "https://danielkobko.com/"
-        },
-        {
             img: guelph, 
             dimensions: [900*0.1, 900*0.1],
             title: "CIFAR-10 Image Classifier", 
             language: "Python", 
             date: "2022", 
             description: "A project for my Computational Intelligence course (CIS*4780) at the University of Guelph. It involved using python and pytorch to create a fully connected neural network, as well as a convolutional neural network. Classifies to an accuracy of around 60%", 
-            link: "https://github.com/leinad-kobko/"
+            link: "https://github.com/leinad-kobko/cifar10-image-classifier"
         },
         {
             img: cars, 
@@ -53,7 +44,7 @@ export default function Projects() {
             language: "Javascript", 
             date: "2022", 
             description: "A project for my Software Engineering Course (CIS*3760) at the University of Guelph. In a team of six, we had to implement a website onto an NGINX server that scrapes the university website for course information and displays it in an intuitive manner.", 
-            link: "https://github.com/leinad-kobko/guelph-utility-engine"
+            link: "https://github.com/leinad-kobko/guelph-search-graph"
         },
     ];
   return (
@@ -67,6 +58,18 @@ export default function Projects() {
         >
             <div className="lg:w-1/2 flex flex-col items-center">
                 <h1 className="font-bold text-3xl text-red-500 mb-10">Projects</h1>
+                <InfoCard
+                    img={dkred}
+                    dimensions={[900*0.1, 900*0.1]}
+                    title={"Personal Portfolio Website"}
+                    location={"Primary Language: JavaScript"}
+                    timeFrame={"2022"}
+                >
+                    <div className="flex flex-col">
+                        <h1 className="font-bold text-xl text-red-500">{"Personal Portfolio Website"}</h1>
+                        {"The personal portfolio website you're looking at. Built to show some of my skills with web development, and provide a pleasant view of all my achievements and skills."}
+                    </div>
+                </InfoCard>
                 {projects.map((project) => {
                     return (
                         <InfoCard
