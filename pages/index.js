@@ -1,83 +1,121 @@
-import React from "react";
-import Layout from "../components/Layout";
-import Head from "next/head";
 import Image from "next/image";
-import me from '../icons/Profile.png'
-import github from '../icons/github.png'
-import { DiGithubBadge } from 'react-icons/di';
-import { BsLinkedin } from 'react-icons/bs';
-import { HiMail } from 'react-icons/hi';
-import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
-import SocialsCard from "../components/SocialsCard";
-import SocialsCardMobile from "../components/SocialsCardMobile";
+import NavBar from "../components/NavBar";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import {RiMenu5Fill} from 'react-icons/ri';
+import {AiFillInstagram, AiFillGithub, AiFillLinkedin, AiFillMail} from 'react-icons/ai';
+import {SiLeetcode} from 'react-icons/si';
+import {HiDocumentText} from 'react-icons/hi';
+import Introduction from "../components/Introduction";
 import Education from "../components/Education";
-import Work from "../components/Work";
-import TitleBar from "../components/TitleBar";
-import Carousel, { CarouselItem } from "../components/Carousel";
+import Projects from "../components/Projects";
+import Skills from "../components/Skills";
 
-export default function Home() {
-    const secondary_colour = "#6a82fb";
-    const buttoneffects = "transition ease-in-out hover:scale-105 hover:fill-blue-600 duration-300"
-    const carouselSlideCount = 3 - 1;
-    const [carouselSlide, setCarouselSlide] = React.useState(0);
-
-    const onLeftCarouselClick = () => {
-        let newVal = carouselSlide;
-        newVal -= 1;
-        newVal = newVal < 0 ? carouselSlideCount : newVal;
-        setCarouselSlide(newVal); 
-    }
-
-    const onRightCarouselClick = () => {
-        let newVal = carouselSlide;
-        newVal += 1;
-        newVal = newVal > carouselSlideCount ? 0 : newVal;
-        setCarouselSlide(newVal); 
-    }
-
-    const slides = [
-        {title: "About Me", content: "I'm a 3rd year Bachelor of Computing student at the University of Guelph. Currently I do software development but hope to get into data science."},
-        {title: "Skills", content: "I know Python, JS, and C. During my schooling, I have also worked with databases, cryptography, and AI."},
-        {title: "Hobbies", content: "I like playing games, drawing, working out, and coding small side projects to improve my skills. I am also trying to use LeetCode."},
-    ];
-
-    const smallScreen = useMediaQuery('(min-width:1025px)');
+export default function NewHome() {
+    const smallScreen = useMediaQuery('(min-width:1024px)');
+    const navActive = "hidden";
 
     return (
-        <Layout>
-            <Head>
-                <title>Daniel Kobko</title>
-            </Head>
-            <div 
-                id="content-wrapper" 
-                className="h-full flex-col flex content-stretch lg:justify-between items-center mt-16"
-            >
-                <div id="intro-text" className="text-center pb-20">
-                    <p className="font-['Courier'] text-4xl lg:text-5xl text-blue-500">{"> Hello World."}</p>
-                    <p className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-bl from-blue-400 to-red-500">{"I'm Daniel Kobko"}</p>
+        <div className="GRADIENT-CONTAINER h-screen relative flex flex-col lg:flex-row bg-gradient-to-t from-purple-500 to-pink-500">
+            {smallScreen ?
+                <NavBar/>
+                :
+                <div className="NAV-CONTAINER h-16 flex justify-center items-center">
+                    <button>
+                        <div className="flex gap-3 text-3xl text-slate-100 font-thin">
+                            <RiMenu5Fill/>
+                            <p className="text-xl">Menu</p>
+                        </div>
+                    </button>
                 </div>
-                <div id="card-area" className="flex justify-center w-full">
-                    {smallScreen ? <SocialsCard/> : <SocialsCardMobile/>}
-                </div>
-                <div id="content" className="flex flex-col w-3/4 md:w-1/2 md:max-w-1/2 justify-center items-center">
-                    <TitleBar>A Little About Me</TitleBar>
-                    <Carousel>
-                        {slides.map((slide) => {
-                            return (
-                                <CarouselItem key={slide}>
-                                    <p className="text-xl font-bold text-red-400">{slide.title}</p>
-                                    <p>{slide.content}</p>
-                                </CarouselItem>
-                            );
-                        })}
-                    </Carousel>
-                    <TitleBar>Education</TitleBar>
-                    <Education/>
-                    <TitleBar>Work Experience</TitleBar>
-                    <Work/>
+            }
+            <div className="flex-1 relative">
+                <div className="absolute inset-4 top-0 lg:top-4 bg-slate-100 rounded-3xl py-5 text-black overflow-hidden">
+                    <div className="w-full h-full overflow-y-auto scroll-smooth">
+                        <div id="Introduction" className="w-full h-full flex justify-center items-center">
+                            <Introduction/>
+                        </div>
+                        <div id="Education" className="w-full min-h-full flex justify-center items-center">
+                            <Education/>
+                        </div>
+                        <div id="Projects" className="w-full h-full flex justify-center items-center">
+                            <Projects/>
+                        </div>
+                        <div id="Skills" className="w-full h-full flex justify-center items-center">
+                            <Skills/>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </Layout>
-    )
+
+
+
+
+            {/* <div className="flex flex-col lg:flex-row h-full">
+                
+                <div className="p-3 w-full h-full lg:p-10 lg:pl-0">
+                    <div className="WHITECARD w-full h-full bg-slate-100 py-5 rounded-3xl drop-shadow-xl">
+                        <div className="w-full h-full overflow-auto scroll-smooth">
+                            <div id="Introduction" className="w-full h-full flex flex-col lg:flex-row">
+                                <div className="w-1/2 h-full hidden lg:contents">
+                                    <div className="w-1/2 h-4/6 lg:h-full relative">
+                                        <Image
+                                            src={"/icons/businessman2.png"}
+                                            layout={"fill"}
+                                            alt="Picture of Daniel Kobko"
+                                            className="object-contain object-left"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center gap-10">
+                                    <div className="flex flex-wrap justify-center gap-4">
+                                        <p className="text-4xl lg:text-5xl font-thin">
+                                            Hello, my name is 
+                                        </p>
+                                        <p className="text-4xl lg:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-pink-500">Daniel Kobko.</p>
+                                    </div>
+                                    <div className="w-1/2 flex flex-col xl:flex-row text-5xl gap-5 text-purple-500 items-center">
+                                        <div className="flex flex-wrap justify-center gap-4">
+                                            <a href="/newhome" className="hover:text-purple-700 ease-in-out duration-300"><AiFillGithub/></a>
+                                            <a href="/newhome" className="hover:text-purple-700 ease-in-out duration-300"><AiFillInstagram/></a>
+                                            <a href="/newhome" className="hover:text-purple-700 ease-in-out duration-300"><AiFillLinkedin/></a>
+                                            <a href="/newhome" className="hover:text-purple-700 ease-in-out duration-300"><AiFillMail/></a>
+                                            <a href="/newhome" className="hover:text-purple-700 ease-in-out duration-300"><SiLeetcode/></a>
+                                            <a href="/newhome" className="hover:text-purple-700 ease-in-out duration-300"><HiDocumentText/></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Education" className="w-full h-full flex flex-wrap gap-4 items-center">
+                                <div>
+
+                                </div>
+                                {/* {institutions.map((i) => {
+                                    return (
+                                        <>
+                                            <EducationCard
+                                                name={i.name}
+                                                honor={i.honor}
+                                                date={i.date}
+                                                location={i.location}
+                                                pic={i.pic}
+                                            />
+                                        </>
+                                    );
+                                })} 
+                            </div>
+                            <div id="Projects" className="w-full h-full">
+                                Projects
+                            </div>
+                            <div id="Experience" className="w-full h-full">
+                                Experience
+                            </div>
+                            <div id="Skills" className="w-full h-full">
+                                Skills
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> */}
+        </div>
+    );
 }
