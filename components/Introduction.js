@@ -12,97 +12,41 @@ import StylizedBox from "./StylizedBox";
 
 // Components
 import TLItem from "./TLItem";
+import Skills from "./Skills";
+import { BsChat } from "react-icons/bs";
 
 export default function Introduction() {
-
-    const smallScreen = useMediaQuery('(min-width:1024px)');
-
-    const institutions = [
-        {
-            name: "Udemy",
-            date: "2019-Present",
-            pic: "/icons/cibc.png"
-        },
-        {
-            name: "University of Guelph",
-            honor: "Honours B.S. (Computing - CS)",
-            date: "2019-2023",
-            location: "Guelph, ON.",
-            pic: "/icons/gue.png"
-        },
-        {
-            name: "St. Thomas Aquinas",
-            honor: "Ontario Scholar",
-            date: "2015-2019",
-            location: "Oakville, ON.",
-            pic: "/icons/STA.png"
-        },
-    ];
-
-    const socials = [
-        <AiFillGithub/>,
-        <AiFillInstagram/>,
-        <AiFillLinkedin/>,
-        <AiFillMail/>,
-        <SiLeetcode/>,
-        <HiDocumentText/>
-    ];
-
     return (
-        <div className="CONTAINER w-full h-full flex flex-col lg:flex-row">
-            <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center gap-10">
-                <div className="GREETING text-4xl lg:text-6xl flex gap-2 font-thin">
-                    <p>Hi! I'm</p>
-                    <p className="font-semibold text-pink-500">Dan.</p>
+        <div className="CONTAINER w-full min-h-[90vh] flex flex-col lg:flex-row justify-center items-center">
+            <div className="IMAGECONTENT w-full flex justify-center items-center">
+                <div className="mt-5 w-64 h-96 xl:scale-[150%] ease-in-out duration-100 relative overflow-hidden bg-slate-100 rounded-[6rem]">
+                    <Image
+                        src={"/icons/newspiffy.jpg"}
+                        layout="fill"
+                        alt="a picture of Daniel Kobko"
+                        className="object-cover"
+                    />
                 </div>
-                <StylizedBox
-                    width="w-[85%] lg:w-1/2"
-                    height="h-96 lg:h-1/2"
-                    bordersize="4"
-                    bordercolour="pink-500"
-                    textcolour="pink-500"
-                    spacerwidth="w-10"
-                    spacerheight="h-10"
-                > 
-                    <div className="w-full h-full relative">
-                        <Image
-                            src={"/icons/spiffy.png"}
-                            layout="fill"
-                            alt="Picture of Dan"
-                            className="object-contain"
-                        />
-                    </div>
-                </StylizedBox>
-                <button className="HIREBUTTON bg-pink-500 py-3 px-10 ease-in-out duration-300 hover:bg-pink-700 cursor-pointer">
-                    <p className="text-slate-100 text-2xl">Hire Me</p>
-                </button>
             </div>
-            <div className="w-full lg:w-[40%] lg:h-[90%] bg-pink-500 flex flex-col justify-between">
-                <div className="w-full flex justify-center">
-                    <div className="TIMELINE w-full lg:w-1/2 h-full flex justify-center">
-                        <ol className="relative border-l pt-10 border-pink-300">                  
-                            {institutions.map((i, idx) => {
-                                return(
-                                    <TLItem
-                                        key={idx}
-                                        name={i.name}
-                                        honor={i.honor}
-                                        date={i.date}
-                                        location={i.location}
-                                        pic={i.pic}
-                                    />
-                                );
-                            })}
-                        </ol>
-                    </div>
+            <div className="INTROCONTENT px-5 w-full flex flex-col items-center">
+                <div className="GREETING py-5 flex flex-wrap gap-5 pb-10">
+                    <p className="text-2xl lg:text-5xl font-semibold text-pink-500">{"> Hello, my name is Dan."}</p>
+                    <p className="text-lg font-thin">{"I'm a passionate programmer that loves to create clean & responsive designs. I try to learn something new with each project I make and strive to create a product that is better than what I was asked for."}</p>
                 </div>
-                <div className="w-full py-10 flex flex-wrap gap-5 justify-center items-center text-5xl text-slate-100">
-                    <AiFillGithub className="hover:text-pink-300 ease-in-out duration-300 cursor-pointer"/>
-                    <AiFillInstagram className="hover:text-pink-300 ease-in-out duration-300 cursor-pointer"/>
-                    <AiFillLinkedin className="hover:text-pink-300 ease-in-out duration-300 cursor-pointer"/>
-                    <AiFillMail className="hover:text-pink-300 ease-in-out duration-300 cursor-pointer"/>
-                    <SiLeetcode className="hover:text-pink-300 ease-in-out duration-300 cursor-pointer"/>
-                    <HiDocumentText className="hover:text-pink-300 ease-in-out duration-300 cursor-pointer"/>
+                <div className="BUTTONAREA flex flex-wrap justify-center items-center gap-4 text-2xl font-thin pb-20">
+                    <p>Want to chat?</p>
+                    <button className="py-3 px-10 rounded-lg bg-pink-500 text-slate-100 flex justify-center items-center gap-4 hover:bg-pink-600 ease-in duration-100">
+                        <BsChat/>
+                        <p>Connect</p>
+                    </button>
+                </div>
+                <div className="SOCIALS w-[90%] pb-20 lg:pt-100 flex justify-center lg:justify-end flex-wrap items-center text-5xl gap-5">
+                    <AiFillInstagram className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    <AiFillGithub className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    <SiLeetcode className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    <AiFillLinkedin className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    <AiFillMail className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    <HiDocumentText className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
                 </div>
             </div>
         </div>

@@ -5,7 +5,8 @@ export default function StylizedBox({width, height, bordersize, bordercolour, te
 
     return (
         <div className={width + " " + height + " border-" + bordersize + " border-" + bordercolour + " border-b-0 border-r-0 flex justify-center items-center relative"}>
-            <div className={"w-full h-full border-" + bordersize + " border-" + bordercolour + " border-t-0 border-l-0 border-dashed flex justify-center items-center"}>
+            {/* <div className={"w-full h-full border-" + bordersize + " border-" + bordercolour + " border-t-0 border-l-0 border-dashed flex justify-center items-center"}> */}
+            <div className={"w-full h-full border-4 border-pink-500 border-t-0 border-l-0 border-dashed flex justify-center items-center"}>
                 <div className={"z-0 bg-slate-100 " + spacerwidth + " " + spacerheight + " absolute top-0 right-0 translate-x-[4px] -translate-y-[4px]"}/>
                 <div className={"z-0 bg-slate-100 " + spacerwidth + " " + spacerheight + " absolute bottom-0 left-0 -translate-x-[4px] translate-y-[4px]"}/>
                 <div className={"z-0 bg-slate-100 " + spacerwidth + " " + spacerheight + " absolute top-0 right-0 translate-x-[4px] -translate-y-[4px]"}>

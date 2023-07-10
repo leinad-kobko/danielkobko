@@ -7,6 +7,7 @@ import {SiLeetcode} from 'react-icons/si';
 import {HiDocumentText} from 'react-icons/hi';
 import Introduction from "../components/Introduction";
 import Education from "../components/Education";
+import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
@@ -29,20 +30,23 @@ export default function NewHome() {
                 </div>
             }
             <div className="flex-1 relative">
-                <div className="absolute inset-4 top-0 lg:top-4 bg-slate-100 rounded-3xl py-5 lg:py-0 lg:px-5 text-black overflow-hidden">
+                <div className="absolute inset-4 top-0 lg:top-4 bg-slate-100 rounded-3xl text-black overflow-hidden">
                     <div className="w-full h-full overflow-y-auto scroll-smooth">
-                        <div id="Introduction" className="w-full h-full flex justify-center items-center">
+                        <div id="Introduction" className="w-full min-h-screen flex justify-center items-center">
                             <Introduction/>
                         </div>
-                        <div id="Education" className="w-full min-h-full flex justify-center items-center">
+                        <div id="Education" className="w-full min-h-screen flex justify-center lg:justify-start items-center">
                             <Education/>
                         </div>
-                        <div id="Projects" className="w-full h-full flex justify-center items-center">
+                        {/* <div id="Experience" className="w-full min-h-screen flex justify-center items-center">
+                            <Experience/>
+                        </div> */}
+                        <div id="Projects" className="w-full min-h-screen flex justify-center items-center">
                             <Projects/>
                         </div>
-                        <div id="Skills" className="w-full h-full flex justify-center items-center">
+                        {/* <div id="Skills" className="w-full min-h-screen flex justify-center items-center">
                             <Skills/>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

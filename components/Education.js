@@ -1,3 +1,4 @@
+import Skills from "./Skills";
 import TLItem from "./TLItem";
 
 export default function Education() {
@@ -24,17 +25,10 @@ export default function Education() {
     ];
 
     return (
-        <div className="w-full h-full bg-purple-500 py-5 flex flex-col justify-center items-center">
-            <p className="text-3xl text-slate-100 font-thin p-5">Education</p>
-            <div className="CONTENT w-full h-full flex flex-row">
-                <div className="TIMELINECONTENT w-1/2 h-full hidden lg:flex justify-center items-center">
-                    <div className="p-10 w-[80%] h-full border border-white">
-                        <p className="text-white">
-                            *General Info / Info about the item where Show More was pressed*
-                        </p>
-                    </div>
-                </div>
-                <div className="TIMELINE w-full lg:w-1/2 h-full flex justify-center">
+        <div className="w-full lg:w-[90%] h-full bg-purple-500 flex flex-col">
+            <div className="CONTENT w-full h-full flex flex-wrap">                
+                <div className="TIMELINE w-full lg:w-1/2 h-full flex flex-col justify-center items-center">
+                    <p className="py-10 text-4xl text-slate-100 font-thin px-20">Education</p>
                     <ol className="relative border-l border-pink-300">                  
                         {institutions.map((i, idx) => {
                             return(
@@ -49,6 +43,9 @@ export default function Education() {
                             );
                         })}
                     </ol>
+                </div>
+                <div className="SKILLSLEARNED w-full lg:w-1/2 h-full p-10 justify-center items-center">
+                    <Skills/>
                 </div>
             </div>
         </div>

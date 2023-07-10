@@ -4,7 +4,13 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 export default function NavBar() {
 
     const smallScreen = useMediaQuery('(min-width:900px)');
-    const nav_items = ["Introduction", "Education", "Projects", "Skills"];
+    const nav_items = [
+        "Introduction", 
+        "Education", 
+        // "Experience", 
+        "Projects", 
+        // "Skills",
+    ];
 
     return (
         <div className="NAVBAR w-1/5 h-screen flex flex-col justify-between py-10">
