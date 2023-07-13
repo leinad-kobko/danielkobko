@@ -44,16 +44,16 @@ export default function Introduction() {
                     </button>
                 </div>
                 <div className="SOCIALS w-[90%] pb-20 lg:pt-100 flex justify-center lg:justify-end flex-wrap items-center text-5xl gap-5">
-                    <a target="_blank" href="https://www.instagram.com/dankobko_/">
+                    <a target="_blank" rel="noreferrer" href="https://www.instagram.com/dankobko_/">
                         <AiFillInstagram className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
                     </a>
-                    <a target="_blank" href="https://github.com/leinad-kobko">
+                    <a target="_blank" rel="noreferrer" href="https://github.com/leinad-kobko">
                         <AiFillGithub className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
                     </a>
-                    <a target="_blank" href="https://leetcode.com/danielkobko/">
+                    <a target="_blank" rel="noreferrer" href="https://leetcode.com/danielkobko/">
                         <SiLeetcode className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/daniel-kobko-19a785176/">
+                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/daniel-kobko-19a785176/">
                         <AiFillLinkedin className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
                     </a>
                     <div className="relative">
@@ -73,7 +73,7 @@ export default function Introduction() {
                             <AiFillMail className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer relative"/>
                         </button>
                     </div>
-                    <a target="_blank" href="/res/resume-bloop.txt" download>
+                    <a target="_blank" rel="noreferrer" href="/res/resume-bloop.txt" download>
                         <HiDocumentText className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
                     </a>
                 </div>
