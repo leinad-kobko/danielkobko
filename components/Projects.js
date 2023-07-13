@@ -7,26 +7,26 @@ export default function Projects() {
                 <p className="text-3xl font-thin p-5">Projects</p>
                 <div className="PROJECTS flex flex-wrap gap-5 p-5">
                     <ProjectCard
-                        imgsrc={"/icons/cars.png"}
-                        date="June 26, 2023"
-                        title="Both Links Component"
-                        description="If I provide both links to this component both buttons will show."
-                        projref={"https://roducha.vercel.app/"}
-                        gitref={"https://github.com/leinad-kobko/roducha"}
-                    />
-                    <ProjectCard
-                        imgsrc={"/icons/pacman.png"}
+                        imgsrc={"/icons/underconstruction.jpg"}
                         date="June 27, 2023"
-                        title="Only Github"
-                        description="If I provide my github link to this component only github will show."
-                        gitref={"https://github.com/leinad-kobko/roducha"}
+                        title="KOKO Drone Services"
+                        description="Website that provides information about KOKO's and can schedule appointments"
+                        pageref={"https://kokodronesservices.vercel.app/"}
                     />
                     <ProjectCard
-                        imgsrc={"/icons/gue.png"}
-                        date="June 28, 2023"
-                        title="Only Project"
-                        description="If I provide only project link to this component only project will show."
-                        projref={"https://roducha.vercel.app/"}
+                        imgsrc={"/icons/roducha.jpg"}
+                        date="June 26, 2023"
+                        title="Roducha Farm"
+                        description="Website for the farm to provide information and sell merchandise."
+                        pageref={"https://roducha.vercel.app/"}
+                    />
+                    <ProjectCard
+                        imgsrc={"/icons/danielkobko.com.jpg"}
+                        date="March 19, 2022"
+                        title="danielkobko.com"
+                        description="Website that acts as my portfolio and shows off some of my skills."
+                        pageref={"https://danielkobko.com"}
+                        gitref={"https://github.com/leinad-kobko/danielkobko"}
                     />
                 </div>
             </div>

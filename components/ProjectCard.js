@@ -2,7 +2,7 @@
 import Image from "next/image";
 import {AiFillGithub, AiOutlineEye} from "react-icons/ai"
 
-function ProjectCard({imgsrc, date, title, description, projref, gitref}) {
+function ProjectCard({imgsrc, date, title, description, pageref, gitref}) {
     return (
         <div className="w-80 bg-slate-100 shadow-lg rounded-lg overflow-hidden">
             <div className="w-full h-48 relative">
@@ -20,37 +20,37 @@ function ProjectCard({imgsrc, date, title, description, projref, gitref}) {
                     <p className="font-thin">{description}</p>
                 </div>
                 <div className="w-full flex mt-5">
-                    { projref == "" || gitref == "" ?
+                    { pageref == "" || gitref == "" ?
                         <>
-                            {projref == "" ?
+                            {pageref == "" ?
                             <>
-                                <button className="w-full h-14 bg-pink-500 p-3 rounded-lg border border-pink-500 text-slate-100 hover:bg-pink-400 flex gap-2 justify-center items-center">
+                                <a target="_blank" href={gitref} className="w-full h-14 bg-pink-500 p-3 rounded-lg border border-pink-500 text-slate-100 hover:bg-pink-400 flex gap-2 justify-center items-center">
                                     <AiFillGithub className="text-slate-100 text-3xl"/>
-                                    <p>View Project</p>
-                                </button>
+                                    <p>View Repository</p>
+                                </a>
                             </>
                             :
                             <>
-                                <button className="w-full h-14 px-5 py-2 rounded-lg border border-pink-500 text-pink-500 hover:bg-pink-200">
-                                    <div className="flex justify-center items-center gap-2">
+                                <a target="_blank" href={pageref} className="w-full h-14 px-5 py-2 rounded-lg border border-pink-500 text-pink-500 hover:bg-pink-200">
+                                    <div className="w-full h-full flex justify-center items-center gap-2">
                                         <AiOutlineEye className="text-2xl"/>
-                                        <p>View Project</p>
+                                        <p>View Page</p>
                                     </div>
-                                </button>
+                                </a>
                             </>
                             }
                         </>
                         :
                         <>
-                            <button className="h-14 bg-pink-500 p-3 rounded-l-lg border border-pink-500 text-pink-500 hover:bg-pink-400 border-r-0">
+                            <a target="_blank" href={gitref} className="h-14 bg-pink-500 p-3 rounded-l-lg border border-pink-500 text-pink-500 hover:bg-pink-400 border-r-0">
                                 <AiFillGithub className="text-slate-100 text-3xl"/>
-                            </button>
-                            <button className="w-full h-14 px-5 py-2 rounded-r-lg border border-pink-500 text-pink-500 border-l-0 hover:bg-pink-200">
-                                <div className="flex justify-center items-center gap-2">
+                            </a>
+                            <a target="_blank" href={pageref} className="w-full h-14 px-5 py-2 rounded-r-lg border border-pink-500 text-pink-500 border-l-0 hover:bg-pink-200">
+                                <div className="w-full h-full flex justify-center items-center gap-2">
                                     <AiOutlineEye className="text-2xl"/>
                                     <p>View Project</p>
                                 </div>
-                            </button>
+                            </a>
                         </>
                     }
                 </div>
@@ -64,7 +64,7 @@ ProjectCard.defaultProps = {
     title: "Example Title",
     description: "Example description",
     imgsrc: "/icons/cars.png",
-    projref: "",
+    pageref: "",
     gitref: "",
 };
 

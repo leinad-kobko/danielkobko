@@ -2,14 +2,23 @@
 import Image from "next/image";
 
 // react-icons
-import {AiFillInstagram, AiFillGithub, AiFillLinkedin, AiFillMail} from 'react-icons/ai';
+import {AiFillInstagram, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillCloseCircle} from 'react-icons/ai';
 import {SiLeetcode} from 'react-icons/si';
 import {HiDocumentText} from 'react-icons/hi';
 
 // Components
 import { BsChat } from "react-icons/bs";
+import { useState } from "react";
 
 export default function Introduction() {
+
+    const [tooltip, setTooltip] = useState("Mail copied to clipboard.");
+    const [tooltipOpacity, setTooltipOpacity] = useState(" opacity-0");
+
+    const handleMail = () => {
+        navigator.clipboard.writeText("danielkobko@gmail.com");
+    }
+
     return (
         <div className="CONTAINER w-full min-h-[90vh] flex flex-col lg:flex-row justify-center items-center">
             <div className="IMAGECONTENT w-full flex justify-center items-center">
@@ -35,12 +44,38 @@ export default function Introduction() {
                     </button>
                 </div>
                 <div className="SOCIALS w-[90%] pb-20 lg:pt-100 flex justify-center lg:justify-end flex-wrap items-center text-5xl gap-5">
-                    <AiFillInstagram className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
-                    <AiFillGithub className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
-                    <SiLeetcode className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
-                    <AiFillLinkedin className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
-                    <AiFillMail className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
-                    <HiDocumentText className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    <a target="_blank" href="https://www.instagram.com/dankobko_/">
+                        <AiFillInstagram className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    </a>
+                    <a target="_blank" href="https://github.com/leinad-kobko">
+                        <AiFillGithub className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    </a>
+                    <a target="_blank" href="https://leetcode.com/danielkobko/">
+                        <SiLeetcode className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/daniel-kobko-19a785176/">
+                        <AiFillLinkedin className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    </a>
+                    <div className="relative">
+                        <p className={"absolute w-[12rem] bottom-[120%] left-[-150%] bg-slate-900 px-5 text-slate-100 text-sm rounded-md transition-opacity ease-in-out duration-200" + tooltipOpacity}>
+                            {tooltip}
+                        </p>
+                        <button 
+                            onClick={() => {
+                                handleMail();
+                                setTooltipOpacity(" opacity-100");
+                            }}
+                            onMouseEnter={() => {}}
+                            onMouseLeave={() => {
+                                setTooltipOpacity(" opacity-0");
+                            }}
+                        >
+                            <AiFillMail className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer relative"/>
+                        </button>
+                    </div>
+                    <a target="_blank" href="/res/resume-bloop.txt" download>
+                        <HiDocumentText className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    </a>
                 </div>
             </div>
         </div>

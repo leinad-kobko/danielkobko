@@ -11,6 +11,7 @@ import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import { nav_items } from "../components/NavBar";
+import Head from "next/head";
 
 import { useState } from "react";
 
@@ -26,6 +27,7 @@ export default function NewHome() {
 
     return (
         <div className="GRADIENT-CONTAINER h-screen lg:h-full relative flex flex-col lg:flex-row bg-gradient-to-t from-purple-500 to-pink-500">
+            <Head><title>Daniel Kobko</title></Head>
             {smallScreen ?
                 <NavBar/>
                 :
@@ -48,8 +50,8 @@ export default function NewHome() {
                         <ul className="w-full h-[80%] flex flex-col justify-center items-center">
                             {nav_items.map((item) => {
                                 return(
-                                    <li key={item} className="py-5">
-                                        <button className="py-5 text-slate-100 text-2xl font-thin hover:font-semibold" href={"#" + item} onClick={handleMenu}>
+                                    <li key={item} className="">
+                                        <button className="px-10 py-5 hover:bg-slate-100/20 text-slate-100 text-2xl font-thin" href={"#" + item} onClick={handleMenu}>
                                             <a  href={"#" + item}>{item}</a>
                                         </button>
                                     </li>
