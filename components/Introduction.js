@@ -6,20 +6,14 @@ import {AiFillInstagram, AiFillGithub, AiFillLinkedin, AiFillMail} from 'react-i
 import {SiLeetcode} from 'react-icons/si';
 import {HiDocumentText} from 'react-icons/hi';
 
-// Material UI 
-import useMediaQuery from '@mui/material/useMediaQuery';
-import StylizedBox from "./StylizedBox";
-
 // Components
-import TLItem from "./TLItem";
-import Skills from "./Skills";
 import { BsChat } from "react-icons/bs";
 
 export default function Introduction() {
     return (
         <div className="CONTAINER w-full min-h-[90vh] flex flex-col lg:flex-row justify-center items-center">
             <div className="IMAGECONTENT w-full flex justify-center items-center">
-                <div className="mt-5 w-64 h-96 xl:scale-[150%] ease-in-out duration-100 relative overflow-hidden bg-slate-100 rounded-[6rem]">
+                <div className="mt-5 w-64 h-80 lg:scale-[140%] xl:scale-[175%] ease-in-out duration-100 relative overflow-hidden bg-slate-100 rounded-[6rem]">
                     <Image
                         src={"/icons/newspiffy.jpg"}
                         layout="fill"
@@ -28,9 +22,9 @@ export default function Introduction() {
                     />
                 </div>
             </div>
-            <div className="INTROCONTENT px-5 w-full flex flex-col items-center">
+            <div className="INTROCONTENT min-h-[60vh] px-5 w-full flex flex-col justify-between items-center">
                 <div className="GREETING py-5 flex flex-wrap gap-5 pb-10">
-                    <p className="text-2xl lg:text-5xl font-semibold text-pink-500">{"> Hello, my name is Dan."}</p>
+                    <p className="text-4xl lg:text-6xl font-semibold text-pink-500">{"> Hi I'm Dan."}</p>
                     <p className="text-lg font-thin">{"I'm a passionate programmer that loves to create clean & responsive designs. I try to learn something new with each project I make and strive to create a product that is better than what I was asked for."}</p>
                 </div>
                 <div className="BUTTONAREA flex flex-wrap justify-center items-center gap-4 text-2xl font-thin pb-20">

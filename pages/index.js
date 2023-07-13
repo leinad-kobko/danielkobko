@@ -1,7 +1,7 @@
 import Image from "next/image";
 import NavBar from "../components/NavBar";
 import useMediaQuery from '@mui/material/useMediaQuery';
-import {RiMenu5Fill} from 'react-icons/ri';
+import {RiCloseFill, RiMenu5Fill} from 'react-icons/ri';
 import {AiFillInstagram, AiFillGithub, AiFillLinkedin, AiFillMail} from 'react-icons/ai';
 import {SiLeetcode} from 'react-icons/si';
 import {HiDocumentText} from 'react-icons/hi';
@@ -10,10 +10,19 @@ import Education from "../components/Education";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
+import { nav_items } from "../components/NavBar";
+
+import { useState } from "react";
 
 export default function NewHome() {
     const smallScreen = useMediaQuery('(min-width:1024px)');
     const navActive = "hidden";
+
+    const [menuOpen, setMenuOpen] = useState(" hidden");
+
+    const handleMenu = () => {
+        menuOpen == " opacity-[100%]" ? setMenuOpen(" opacity-[0%] hidden") : setMenuOpen(" opacity-[100%]");
+    };
 
     return (
         <div className="GRADIENT-CONTAINER h-screen lg:h-full relative flex flex-col lg:flex-row bg-gradient-to-t from-purple-500 to-pink-500">
@@ -21,12 +30,33 @@ export default function NewHome() {
                 <NavBar/>
                 :
                 <div className="NAV-CONTAINER h-16 flex justify-center items-center">
-                    <button>
+                    <button onClick={handleMenu}>
                         <div className="flex gap-3 text-3xl text-slate-100 font-thin">
                             <RiMenu5Fill/>
                             <p className="text-xl">Menu</p>
                         </div>
                     </button>
+                    <div className={"z-40 absolute top-0 left-0 bg-gradient-to-t from-purple-500 to-pink-500 w-full h-screen" + menuOpen}>
+                        <div className="NAV-CONTAINER h-16 flex justify-center items-center">
+                            <button onClick={handleMenu}>
+                                <div className="flex gap-3 text-3xl text-slate-100 font-thin">
+                                    <RiCloseFill/>
+                                    <p className="text-xl">Close Menu</p>
+                                </div>
+                            </button>
+                        </div>
+                        <ul className="w-full h-[80%] flex flex-col justify-center items-center">
+                            {nav_items.map((item) => {
+                                return(
+                                    <li key={item} className="py-5">
+                                        <button className="py-5 text-slate-100 text-2xl font-thin hover:font-semibold" href={"#" + item} onClick={handleMenu}>
+                                            <a  href={"#" + item}>{item}</a>
+                                        </button>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
                 </div>
             }
             <div className="flex-1 relative">
@@ -38,15 +68,12 @@ export default function NewHome() {
                         <div id="Education" className="w-full min-h-screen flex justify-center lg:justify-start items-center">
                             <Education/>
                         </div>
-                        {/* <div id="Experience" className="w-full min-h-screen flex justify-center items-center">
+                        <div id="Experience" className="w-full min-h-screen flex justify-center items-center">
                             <Experience/>
-                        </div> */}
+                        </div>
                         <div id="Projects" className="w-full min-h-screen flex justify-center items-center">
                             <Projects/>
                         </div>
-                        {/* <div id="Skills" className="w-full min-h-screen flex justify-center items-center">
-                            <Skills/>
-                        </div> */}
                     </div>
                 </div>
             </div>
