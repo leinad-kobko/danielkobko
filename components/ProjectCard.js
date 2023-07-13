@@ -13,7 +13,7 @@ function ProjectCard({imgsrc, date, title, description, pageref, gitref}) {
                     className="object-contain"
                 />
             </div>
-            <div className="p-5 flex flex-col justify-center">
+            <div className="p-4 flex flex-col justify-center">
                 <div>
                     <p className="text-xl font-thin text-slate-500">{date}</p>
                     <p className="text-2xl font-semibold">{title}</p>

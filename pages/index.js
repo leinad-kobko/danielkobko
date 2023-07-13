@@ -63,7 +63,7 @@ export default function NewHome() {
             }
             <div className="flex-1 relative">
                 <div className="absolute inset-4 top-0 lg:top-4 bg-slate-100 rounded-3xl text-black overflow-hidden">
-                    <div className="w-full h-full overflow-y-auto scroll-smooth">
+                    <div className="w-full h-full overflow-x-hidden overflow-y-auto scroll-smooth">
                         <div id="Introduction" className="w-full min-h-screen flex justify-center items-center">
                             <Introduction/>
                         </div>
