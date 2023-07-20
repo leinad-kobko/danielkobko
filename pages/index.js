@@ -1,23 +1,25 @@
-import Image from "next/image";
-import NavBar from "../components/NavBar";
-import useMediaQuery from '@mui/material/useMediaQuery';
-import {RiCloseFill, RiMenu5Fill} from 'react-icons/ri';
-import {AiFillInstagram, AiFillGithub, AiFillLinkedin, AiFillMail} from 'react-icons/ai';
-import {SiLeetcode} from 'react-icons/si';
-import {HiDocumentText} from 'react-icons/hi';
-import Introduction from "../components/Introduction";
+// Components
 import Education from "../components/Education";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
-import Skills from "../components/Skills";
 import { nav_items } from "../components/NavBar";
+import NavBar from "../components/NavBar";
+import Introduction from "../components/Introduction";
+
+// Material UI
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+// react-icons
+import {RiCloseFill, RiMenu5Fill} from 'react-icons/ri';
+
+// Next.JS
 import Head from "next/head";
 
+// React.JS
 import { useState } from "react";
 
 export default function NewHome() {
     const smallScreen = useMediaQuery('(min-width:1024px)');
-    const navActive = "hidden";
 
     const [menuOpen, setMenuOpen] = useState(" hidden");
 

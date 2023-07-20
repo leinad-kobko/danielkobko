@@ -2,6 +2,7 @@ import { Dialog } from "@material-ui/core";
 import Image from "next/image";
 import { useState } from "react";
 import { LiaPagerSolid } from "react-icons/lia"
+import ButtonModal from "./ButtonModal";
 
 export default function ExperienceCard({imgref, date, company, position, location, children}) {
 
@@ -37,12 +38,14 @@ export default function ExperienceCard({imgref, date, company, position, locatio
                     More Details
                 </button>
             </div>
-            <Dialog
+            <ButtonModal
                 open={open}
-                onClose={handleClose}
+                close={handleClose}
+                imgref={imgref}
+                title={company}
             >
                 {children}
-            </Dialog>
+            </ButtonModal>
         </div>
     );
 }

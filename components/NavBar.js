@@ -29,8 +29,8 @@ export default function NavBar() {
                 <ul className="flex flex-col items-center gap-4">
                     {nav_items.map((nav_item, idx) => {
                         return (
-                            <li key={idx}>
-                                <a href={"#" + nav_item} className="text-2xl font-thin text-slate-100 ease-in-out duration-100 hover:font-normal">
+                            <li className="w-full text-center px-10 py-3 hover:bg-slate-100/20 hover:cursor-pointer" key={idx}>
+                                <a href={"#" + nav_item} className="text-2xl font-thin text-slate-100 ease-in-out duration-100">
                                     {nav_item}
                                 </a>
                             </li>

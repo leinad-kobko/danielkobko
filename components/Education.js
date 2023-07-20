@@ -6,25 +6,22 @@ import { FaPython } from "react-icons/fa";
 import { SiAdobephotoshop } from "react-icons/si";
 
 export default function Education() {
-    const institutions = [
+    const udemy_courses = [
         {
-            name: "Udemy",
-            date: "2019-Present",
-            pic: "/icons/cibc.png"
+            name: "React",
+            courseref: "https://www.udemy.com/course/complete-react-developer-zero-to-mastery/",
         },
         {
-            name: "University of Guelph",
-            honor: "Honours B.S. (Computing - CS)",
-            date: "2019-2023",
-            location: "Guelph, ON.",
-            pic: "/icons/gue.png"
+            name: "AWS",
+            courseref: "https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/",
         },
         {
-            name: "St. Thomas Aquinas",
-            honor: "Ontario Scholar",
-            date: "2015-2019",
-            location: "Oakville, ON.",
-            pic: "/icons/STA.png"
+            name: "CSS & SASS",
+            courseref: "https://www.udemy.com/course/advanced-css-and-sass/",
+        },
+        {
+            name: "Javascript",
+            courseref: "https://www.udemy.com/course/the-complete-javascript-course/",
         },
     ];
 
@@ -35,32 +32,39 @@ export default function Education() {
                     <p className="py-10 text-4xl text-slate-100 font-thin px-20">Education</p>
                     <ol className="relative border-l border-pink-300">                  
                         <TLItem
+                            imgref={"/icons/udemy.png"}
                             name={"Udemy"}
                             date={"2019-Present"}
                         >
-                            <div className="DIALOG p-10">
-                                <p>Hello World!</p>
+                            <div className="DIALOG py-5 px-5 lg:px-10">
+                                <div className="DESC py-3">
+                                    <p>Since 2019, I have passively been taking Udemy courses to evolve with web development.</p>
+                                </div>
+                                <div className="py-5">
+                                    <p className="text-lg text-blue-600">Courses</p>
+                                    <ul className="flex flex-wrap">
+                                        {udemy_courses.map((course) => {
+                                            return (
+                                                <li key={course.name} className="py-2 px-5 border bg-pink-500 border-slate-100 text-slate-100 hover:bg-pink-600 hover:cursor-pointer">
+                                                    <a target="_blank" rel="noreferrer" href={course.courseref}>{course.name}</a>
+                                                </li>
+                                            );
+                                        })}
+                                    </ul>
+                                </div>
                             </div>
                         </TLItem>
                         <TLItem
+                            imgref={"/icons/gue.png"}
                             name={"University of Guelph"}
                             honor={"Honours B.S. (Computing - CS)"}
                             date={"2019-2023"}
                         >
-                            <div className="DIALOG">
-                                <div className="p-10">
-                                    <div className="flex flex-wrap justify-center items-center gap-8 border-b pb-5">
-                                        <div className="IMG relative w-32 h-32">
-                                            <Image
-                                                src={"/icons/gue.png"}
-                                                layout={"fill"}
-                                                alt="Saint Thomas Aquinas logo"
-                                                className="object-contain"
-                                            />
-                                        </div>
-                                        <p className="TITLE text-xl lg:text-3xl font-semibold">University of Guelph</p>
+                            <div className="DIALOG h-full">
+                                <div className="p-5 w-full h-64 overflow-auto">
+                                    <div className="DESC py-3">
+                                        <p>{"During the summer of 2023, I was successfully able to complete my Honours Bachelor of Computing (Specializing in Computer Science). Programming was done in C, Java, Python, R, and SQL. I have also completed numerous mathematics courses."}</p>
                                     </div>
-                                    <p className="DESC"></p>
                                     <div className="py-5">
                                         <p className="text-lg text-blue-600">Achievements</p>
                                         <ul className="list-disc pl-5">
@@ -84,33 +88,20 @@ export default function Education() {
                             </div>
                         </TLItem>
                         <TLItem
+                            imgref={"/icons/STA.png"}
                             name={"St. Thomas Aquinas"}
                             honor={"Ontario Scholar"}
                             date={"2015-2019"}
                         >
-                            <div className="DIALOG p-10">
-                                <div className="flex flex-wrap justify-center items-center gap-4 border-b pb-5">
-                                    <div className="IMG relative w-32 h-32">
-                                        <Image
-                                            src={"/icons/STA.png"}
-                                            layout={"fill"}
-                                            alt="Saint Thomas Aquinas logo"
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                    <p className="TITLE text-xl lg:text-3xl font-semibold">St. Thomas Aquinas</p>
-                                </div>
-                                <p className="DESC"></p>
-                                <div className="py-5">
-                                    <p className="text-lg text-blue-600">Achievements</p>
-                                    <ul className="list-disc pl-5">
-                                        <li>{"Ontario Scholars Award (>80% in every year)"}</li>
-                                        <li>{"Award for Grade 11 Computer Science"}</li>
-                                        <li>{"Co-Founder of Computer Science Club"}</li>
-                                        <li>{"Award for Grade 11 Communication Technology (Graphic Design)"}</li>
-                                        <li>{"ECOO 2019 round 2 contestant"}</li>
-                                    </ul>
-                                </div>
+                            <div className="DIALOG py-5 px-5 lg:px-10">
+                                <p className="text-lg text-blue-600">Achievements</p>
+                                <ul className="list-disc pl-5">
+                                    <li>{"Ontario Scholars Award (>80% in every year)"}</li>
+                                    <li>{"Award for Grade 11 Computer Science"}</li>
+                                    <li>{"Co-Founder of Computer Science Club"}</li>
+                                    <li>{"Award for Grade 11 Communication Technology (Graphic Design)"}</li>
+                                    <li>{"ECOO 2019 round 2 contestant"}</li>
+                                </ul>
                             </div>
                         </TLItem>
                     </ol>

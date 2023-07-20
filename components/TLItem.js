@@ -1,5 +1,6 @@
 import { Dialog } from "@material-ui/core";
 import { useState } from "react";
+import ButtonModal from "./ButtonModal";
 
 export default function TLItem(props) {
     const [open, setOpen] = useState(false);
@@ -18,17 +19,18 @@ export default function TLItem(props) {
             <time className="mb-1 text-sm font-normal leading-none text-pink-300">{props.date}</time>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{props.name}</h3>
             <p className="mb-4 text-base font-normal text-gray-500 dark:text-pink-300">{props.honor}</p>
-            <button onClick={handleClickOpen} className="flex font-thin justify-center items-center rounded-xl px-4 py-2 gap-4 
-                               text-slate-100 border border-slate-100 ease-in-out duration-300
-                               hover:border-pink-500 hover:bg-slate-100 hover:text-pink-500">
+            <button onClick={handleClickOpen} className="w-full flex font-thin justify-center items-center rounded-xl py-2 gap-4 
+                               text-slate-100 border border-slate-100 ease-in-out duration-300 hover:bg-slate-100/20">
                 <p>Show More</p>
             </button>
-            <Dialog
+            <ButtonModal
                 open={open}
-                onClose={handleClose}
+                close={handleClose}
+                imgref={props.imgref}
+                title={props.name}
             >
                 {props.children}
-            </Dialog>
+            </ButtonModal>
         </li>
     );
 }

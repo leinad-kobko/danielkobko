@@ -43,7 +43,7 @@ export default function Introduction() {
                         <p>Connect</p>
                     </a>
                 </div>
-                <div className="SOCIALS w-[90%] pb-20 lg:pt-100 flex justify-center lg:justify-end flex-wrap items-center text-5xl gap-5 text-slate-400">
+                <div className="SOCIALS w-[90%] pb-10 lg:pb-0 lg:pt-100 flex justify-center lg:justify-end flex-wrap items-center text-5xl gap-5 text-slate-400">
                     <a target="_blank" rel="noreferrer" href="https://www.instagram.com/dankobko_/">
                         <AiFillInstagram className="hover:text-pink-800 ease-in-out duration-200 hover:scale-[110%] hover:cursor-pointer"/>
                     </a>
