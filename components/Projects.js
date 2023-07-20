@@ -25,7 +25,6 @@ export default function Projects() {
                         date="March 19, 2022"
                         title="danielkobko.com"
                         description="Website that acts as my portfolio and shows off some of my skills."
-                        pageref={"https://danielkobko.com"}
                         gitref={"https://github.com/leinad-kobko/danielkobko"}
                     />
                 </div>

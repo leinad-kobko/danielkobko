@@ -48,7 +48,7 @@ function ProjectCard({imgsrc, date, title, description, pageref, gitref}) {
                             <a target="_blank" rel="noreferrer" href={pageref} className="w-full h-14 px-5 py-2 rounded-r-lg border border-pink-500 text-pink-500 border-l-0 hover:bg-pink-200">
                                 <div className="w-full h-full flex justify-center items-center gap-2">
                                     <AiOutlineEye className="text-2xl"/>
-                                    <p>View Project</p>
+                                    <p>View Page</p>
                                 </div>
                             </a>
                         </>

@@ -67,13 +67,13 @@ export default function NewHome() {
                         <div id="Introduction" className="w-full min-h-screen flex justify-center items-center">
                             <Introduction/>
                         </div>
-                        <div id="Education" className="w-full min-h-screen flex justify-center lg:justify-start items-center">
+                        <div id="Education" className="w-full flex justify-center lg:justify-start items-center">
                             <Education/>
                         </div>
-                        <div id="Experience" className="w-full min-h-screen flex justify-center items-center">
+                        <div id="Experience" className="w-full flex justify-center items-center">
                             <Experience/>
                         </div>
-                        <div id="Projects" className="w-full min-h-screen flex justify-center items-center">
+                        <div id="Projects" className="w-full flex justify-center items-center">
                             <Projects/>
                         </div>
                     </div>

@@ -38,23 +38,23 @@ export default function Introduction() {
                 </div>
                 <div className="BUTTONAREA flex flex-wrap justify-center items-center gap-4 text-2xl font-thin pb-20">
                     <p>Want to chat?</p>
-                    <button className="py-3 px-10 rounded-lg bg-pink-500 text-slate-100 flex justify-center items-center gap-4 hover:bg-pink-600 ease-in duration-100">
+                    <a target="_blank" rel="noreferrer" href="https://cal.com/danielkobko/meet" className="py-3 px-10 rounded-lg bg-pink-500 text-slate-100 flex justify-center items-center gap-4 hover:bg-pink-600 ease-in duration-100">
                         <BsChat/>
                         <p>Connect</p>
-                    </button>
+                    </a>
                 </div>
-                <div className="SOCIALS w-[90%] pb-20 lg:pt-100 flex justify-center lg:justify-end flex-wrap items-center text-5xl gap-5">
+                <div className="SOCIALS w-[90%] pb-20 lg:pt-100 flex justify-center lg:justify-end flex-wrap items-center text-5xl gap-5 text-slate-400">
                     <a target="_blank" rel="noreferrer" href="https://www.instagram.com/dankobko_/">
-                        <AiFillInstagram className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                        <AiFillInstagram className="hover:text-pink-800 ease-in-out duration-200 hover:scale-[110%] hover:cursor-pointer"/>
                     </a>
                     <a target="_blank" rel="noreferrer" href="https://github.com/leinad-kobko">
-                        <AiFillGithub className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                        <AiFillGithub className="hover:text-pink-800 ease-in-out duration-200 hover:scale-[110%] hover:cursor-pointer"/>
                     </a>
                     <a target="_blank" rel="noreferrer" href="https://leetcode.com/danielkobko/">
-                        <SiLeetcode className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                        <SiLeetcode className="hover:text-pink-800 ease-in-out duration-200 hover:scale-[110%] hover:cursor-pointer"/>
                     </a>
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/daniel-kobko-19a785176/">
-                        <AiFillLinkedin className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                        <AiFillLinkedin className="hover:text-pink-800 ease-in-out duration-200 hover:scale-[110%] hover:cursor-pointer"/>
                     </a>
                     <div className="relative">
                         <p className={"absolute w-[12rem] bottom-[120%] left-[-150%] bg-slate-900 px-5 text-slate-100 text-sm rounded-md transition-opacity ease-in-out duration-200" + tooltipOpacity}>
@@ -70,11 +70,11 @@ export default function Introduction() {
                                 setTooltipOpacity(" opacity-0");
                             }}
                         >
-                            <AiFillMail className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer relative"/>
+                            <AiFillMail className="hover:text-pink-800 hover:scale-[110%] ease-in-out duration-200 hover:cursor-pointer relative"/>
                         </button>
                     </div>
-                    <a target="_blank" rel="noreferrer" href="/res/resume-bloop.txt" download>
-                        <HiDocumentText className="hover:text-pink-800 ease-in-out duration-200 hover:cursor-pointer"/>
+                    <a target="_blank" rel="noreferrer" href="/pdf/resume">
+                        <HiDocumentText className="hover:text-pink-800 hover:scale-[110%] ease-in-out duration-200 hover:cursor-pointer"/>
                     </a>
                 </div>
             </div>
