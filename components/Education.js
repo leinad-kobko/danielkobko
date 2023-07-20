@@ -1,9 +1,5 @@
-import SkillBox from "./SkillBox";
 import Skills from "./Skills";
 import TLItem from "./TLItem";
-import Image from "next/image";
-import { FaPython } from "react-icons/fa";
-import { SiAdobephotoshop } from "react-icons/si";
 
 export default function Education() {
     const udemy_courses = [

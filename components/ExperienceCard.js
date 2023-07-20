@@ -1,4 +1,3 @@
-import { Dialog } from "@material-ui/core";
 import Image from "next/image";
 import { useState } from "react";
 import { LiaPagerSolid } from "react-icons/lia"
@@ -30,7 +29,6 @@ export default function ExperienceCard({imgref, date, company, position, locatio
                 <p className="pt-5 text-slate-600">{date}</p>
                 <p className="text-slate-900 text-3xl font-semibold">{company}</p>
                 <p className="text-slate-700 text-xl">{position}</p>
-                {/* <p className="text-slate-700">{location}</p> */}
                 <button onClick={handleClickOpen}
                     className="mt-5 w-full h-14 bg-pink-500 p-3 rounded-lg border border-pink-500 text-slate-100 hover:bg-pink-400 flex gap-2 justify-center items-center"
                 >
