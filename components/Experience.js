@@ -3,7 +3,7 @@ import ExperienceCard from "./ExperienceCard";
 export default function Experience() {
     return (
         <div className="w-full lg:p-10">
-            <p className="text-3xl font-thin p-5">Experience</p>
+            <p className="text-3xl font-thin p-5 text-black dark:text-slate-100">Experience</p>
             <div className="w-full flex flex-wrap gap-5 p-5">
                 <ExperienceCard
                     imgref={"/icons/cibc.png"}
@@ -13,8 +13,8 @@ export default function Experience() {
                     location={"Work from home"}
                 >
                     <div className="DIALOG py-5 px-5 lg:px-10">
-                        <p className="text-lg text-blue-600">Responsibilties</p>
-                        <ul className="list-disc pl-5">
+                        <p className="text-lg text-blue-600 dark:text-blue-300">Responsibilties</p>
+                        <ul className="list-disc pl-5 text-black dark:text-slate-100">
                             <li>Apply innovative thinking to create opportunities for better employment and improve company image</li>
                             <li>Update an application to help with employee productivity</li>
                             <li>Time management</li>

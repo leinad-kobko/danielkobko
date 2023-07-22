@@ -22,7 +22,7 @@ export default function Education() {
     ];
 
     return (
-        <div className="w-full lg:w-[90%] h-full bg-purple-500 flex flex-col">
+        <div className="w-full lg:w-[90%] h-full bg-purple-500 dark:bg-purple-700 flex flex-col">
             <div className="CONTENT w-full h-full flex flex-wrap">                
                 <div className="TIMELINE w-full lg:w-1/2 h-full flex flex-col justify-center items-center">
                     <p className="py-10 text-4xl text-slate-100 font-thin px-20">Education</p>
@@ -33,15 +33,15 @@ export default function Education() {
                             date={"2019-Present"}
                         >
                             <div className="DIALOG py-5 px-5 lg:px-10">
-                                <div className="DESC py-3">
+                                <div className="DESC py-3 text-black dark:text-slate-100">
                                     <p>Since 2019, I have passively been taking Udemy courses to evolve with web development.</p>
                                 </div>
                                 <div className="py-5">
-                                    <p className="text-lg text-blue-600">Courses</p>
+                                    <p className="text-lg text-blue-600 dark:text-blue-300">Courses</p>
                                     <ul className="flex flex-wrap">
                                         {udemy_courses.map((course) => {
                                             return (
-                                                <li key={course.name} className="py-2 px-5 border bg-pink-500 border-slate-100 text-slate-100 hover:bg-pink-600 hover:cursor-pointer">
+                                                <li key={course.name} className="py-2 px-5 border bg-pink-500 dark:bg-pink-700 border-slate-100 dark:border-gray-800 text-slate-100 hover:bg-pink-600 hover:dark:bg-pink-900 hover:cursor-pointer">
                                                     <a target="_blank" rel="noreferrer" href={course.courseref}>{course.name}</a>
                                                 </li>
                                             );
@@ -59,11 +59,11 @@ export default function Education() {
                             <div className="DIALOG h-full">
                                 <div className="p-5 w-full h-64 overflow-auto">
                                     <div className="DESC py-3">
-                                        <p>{"During the summer of 2023, I was successfully able to complete my Honours Bachelor of Computing (Specializing in Computer Science). Programming was done in C, Java, Python, R, and SQL. I have also completed numerous mathematics courses."}</p>
+                                        <p className="text-black dark:text-slate-100">{"During the summer of 2023, I was successfully able to complete my Honours Bachelor of Computing (Specializing in Computer Science). Programming was done in C, Java, Python, R, and SQL. I have also completed numerous mathematics courses."}</p>
                                     </div>
                                     <div className="py-5">
-                                        <p className="text-lg text-blue-600">Achievements</p>
-                                        <ul className="list-disc pl-5">
+                                        <p className="text-lg text-blue-600 dark:text-blue-300">Achievements</p>
+                                        <ul className="list-disc pl-5 text-black dark:text-slate-100">
                                             <li>{"3.7 GPA"}</li>
                                             <li>{"23 Computer Science courses (83% average)"}</li>
                                         </ul>
@@ -71,14 +71,14 @@ export default function Education() {
                                 </div>
                                 <div className="w-full flex flex-wrap justify-center items-center">
                                     <a target="_blank" rel="noreferrer" href="/pdf/transcript"
-                                        className="w-full lg:w-1/2 flex justify-center items-center p-5 bg-slate-100 hover:bg-slate-300 border"
+                                        className="w-full lg:w-1/2 flex justify-center items-center p-5 bg-slate-100 dark:bg-gray-700 hover:bg-slate-300 hover:dark:bg-gray-800 border dark:border-gray-900"
                                     >
-                                        <p>Transcript</p>
+                                        <p className="text-black dark:text-slate-100">Transcript</p>
                                     </a>
                                     <a target="_blank" rel="noreferrer" href="/pdf/schedule"
-                                        className="w-full lg:w-1/2 flex justify-center items-center p-5 bg-slate-100 hover:bg-slate-300 border"
+                                        className="w-full lg:w-1/2 flex justify-center items-center p-5 bg-slate-100 dark:bg-gray-700 hover:bg-slate-300 hover:dark:bg-gray-800 border dark:border-gray-900"
                                     >
-                                        <p>Degree Schedule</p>
+                                        <p className="text-black dark:text-slate-100">Degree Schedule</p>
                                     </a>
                                 </div>
                             </div>

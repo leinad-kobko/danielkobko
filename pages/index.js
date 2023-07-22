@@ -17,6 +17,7 @@ import Head from "next/head";
 
 // React.JS
 import { useState } from "react";
+import ThemeButton from "../components/ThemeButton";
 
 export default function NewHome() {
     const smallScreen = useMediaQuery('(min-width:1024px)');
@@ -28,18 +29,21 @@ export default function NewHome() {
     };
 
     return (
-        <div className="GRADIENT-CONTAINER h-screen lg:h-full relative flex flex-col lg:flex-row bg-gradient-to-t from-purple-500 to-pink-500">
+        <div className="GRADIENT-CONTAINER h-screen lg:h-full relative flex flex-col lg:flex-row bg-gradient-to-t from-purple-500 dark:from-purple-700 to-pink-500 dark:to-pink-700">
             <Head><title>Daniel Kobko</title></Head>
             {smallScreen ?
                 <NavBar/>
                 :
                 <div className="NAV-CONTAINER h-16 flex justify-center items-center">
-                    <button onClick={handleMenu}>
-                        <div className="flex gap-3 text-3xl text-slate-100 font-thin">
-                            <RiMenu5Fill/>
-                            <p className="text-xl">Menu</p>
-                        </div>
-                    </button>
+                    <div className="flex gap-10">
+                        <button onClick={handleMenu}>
+                            <div className="flex gap-3 text-3xl text-slate-100 font-thin">
+                                <RiMenu5Fill/>
+                                <p className="text-xl">Menu</p>
+                            </div>
+                        </button>
+                        <ThemeButton/>
+                    </div>
                     <div className={"z-40 absolute top-0 left-0 bg-gradient-to-t from-purple-500 to-pink-500 w-full h-screen" + menuOpen}>
                         <div className="NAV-CONTAINER h-16 flex justify-center items-center">
                             <button onClick={handleMenu}>
@@ -52,11 +56,9 @@ export default function NewHome() {
                         <ul className="w-full h-[80%] flex flex-col justify-center items-center">
                             {nav_items.map((item) => {
                                 return(
-                                    <li key={item} className="">
-                                        <button className="px-10 py-5 hover:bg-slate-100/20 text-slate-100 text-2xl font-thin" href={"#" + item} onClick={handleMenu}>
-                                            <a  href={"#" + item}>{item}</a>
-                                        </button>
-                                    </li>
+                                    <button key={item} className="w-full flex" onClick={handleMenu}>
+                                        <a href={"#" + item} className="py-5 w-full hover:bg-slate-100/20 text-slate-100 text-2xl font-thin">{item}</a>
+                                    </button>
                                 )
                             })}
                         </ul>
@@ -64,7 +66,7 @@ export default function NewHome() {
                 </div>
             }
             <div className="flex-1 relative">
-                <div className="absolute inset-4 top-0 lg:top-4 bg-slate-100 rounded-3xl text-black overflow-hidden">
+                <div className="absolute inset-4 top-0 lg:top-4 bg-slate-100 dark:bg-gray-700 rounded-3xl text-black overflow-hidden">
                     <div className="w-full h-full overflow-x-hidden overflow-y-auto scroll-smooth">
                         <div id="Introduction" className="w-full min-h-screen flex justify-center items-center">
                             <Introduction/>

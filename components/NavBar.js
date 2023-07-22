@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ThemeButton from "./ThemeButton";
 
 export const nav_items = [
     "Introduction", 
@@ -29,13 +30,16 @@ export default function NavBar() {
                 <ul className="flex flex-col items-center gap-4">
                     {nav_items.map((nav_item, idx) => {
                         return (
-                            <li className="w-full text-center px-10 py-3 hover:bg-slate-100/20 hover:cursor-pointer" key={idx}>
-                                <a href={"#" + nav_item} className="text-2xl font-thin text-slate-100 ease-in-out duration-100">
+                            <a key={idx} href={"#" + nav_item} className="w-full text-2xl font-thin text-slate-100 ease-in-out duration-100">
+                                <li className="w-full text-center px-10 py-3 hover:bg-slate-100/20 hover:cursor-pointer">
                                     {nav_item}
-                                </a>
-                            </li>
+                                </li>
+                            </a>
                         );
                     })}
+                    <li>
+                        <ThemeButton/>
+                    </li>
                 </ul>
             </div>
             <div className="flex flex-col items-center text-slate-100 font-thin">

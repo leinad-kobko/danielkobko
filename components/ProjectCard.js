@@ -4,7 +4,7 @@ import {AiFillGithub, AiOutlineEye} from "react-icons/ai"
 
 function ProjectCard({imgsrc, date, title, description, pageref, gitref}) {
     return (
-        <div className="w-80 bg-slate-100 shadow-lg rounded-lg overflow-hidden">
+        <div className="w-80 bg-white dark:bg-gray-600 shadow-lg rounded-lg overflow-hidden">
             <div className="w-full h-48 relative">
                 <Image
                     src={imgsrc}
@@ -15,9 +15,9 @@ function ProjectCard({imgsrc, date, title, description, pageref, gitref}) {
             </div>
             <div className="p-4 flex flex-col justify-center">
                 <div>
-                    <p className="text-xl font-thin text-slate-500">{date}</p>
-                    <p className="text-2xl font-semibold">{title}</p>
-                    <p className="font-thin">{description}</p>
+                    <p className="text-xl font-thin text-slate-500 dark:text-slate-300">{date}</p>
+                    <p className="text-2xl font-semibold text-black dark:text-slate-100">{title}</p>
+                    <p className="font-thin text-black dark:text-slate-100">{description}</p>
                 </div>
                 <div className="w-full flex mt-5">
                     { pageref == "" || gitref == "" ?
@@ -31,7 +31,7 @@ function ProjectCard({imgsrc, date, title, description, pageref, gitref}) {
                             </>
                             :
                             <>
-                                <a target="_blank" rel="noreferrer" href={pageref} className="w-full h-14 px-5 py-2 rounded-lg border border-pink-500 text-pink-500 hover:bg-pink-200">
+                                <a target="_blank" rel="noreferrer" href={pageref} className="w-full h-14 px-5 py-2 rounded-lg border border-pink-500 dark:border-pink-300 text-pink-500 dark:text-pink-300 hover:bg-pink-200 hover:dark:bg-pink-300/20">
                                     <div className="w-full h-full flex justify-center items-center gap-2">
                                         <AiOutlineEye className="text-2xl"/>
                                         <p>View Page</p>

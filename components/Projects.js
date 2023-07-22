@@ -4,7 +4,7 @@ export default function Projects() {
     return (
         <div className="w-full lg:p-10">
             <div className="COMPLETEPROJ w-full">
-                <p className="text-3xl font-thin p-5">Projects</p>
+                <p className="text-3xl font-thin p-5 text-black dark:text-slate-100">Projects</p>
                 <div className="PROJECTS w-full flex flex-wrap gap-5 p-5">
                     <ProjectCard
                         imgsrc={"/icons/underconstruction.jpg"}

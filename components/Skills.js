@@ -21,7 +21,7 @@ export default function Skills() {
             <div className="flex flex-wrap gap-3 text-slate-100 font-thin text-3xl pb-10">
                 <h1>{"What I learned in the process: " + currSkill}</h1>
             </div>
-            <div id="pinkbg" className="SKILLS w-full h-[80%] lg:h-[90%] flex flex-wrap justify-center overflow-hidden bg-purple-400 rounded-lg">
+            <div id="pinkbg" className="SKILLS w-full h-[80%] lg:h-[90%] flex flex-wrap justify-center overflow-hidden bg-purple-400 dark:bg-purple-500 rounded-lg">
                 <SkillBox setFunc={setCurrSkill} name="Java" textcolour={"text-blue-700"}>
                     <DiJava/>
                 </SkillBox>
