@@ -22,11 +22,11 @@ export default function Education() {
     ];
 
     return (
-        <div className="w-full lg:w-[90%] h-full bg-purple-500 dark:bg-purple-700 flex flex-col">
+        <div className="w-full lg:w-[90%] h-full flex flex-col lg:p-10">
+            <p className="text-3xl font-thin p-5 text-black dark:text-slate-100">Education</p>
             <div className="CONTENT w-full h-full flex flex-wrap">                
                 <div className="TIMELINE w-full lg:w-1/2 h-full flex flex-col justify-center items-center">
-                    <p className="py-10 text-4xl text-slate-100 font-thin px-20">Education</p>
-                    <ol className="relative border-l border-pink-300">                  
+                    <ol className="relative">                  
                         <TLItem
                             imgref={"/icons/udemy.png"}
                             name={"Udemy"}
@@ -102,7 +102,7 @@ export default function Education() {
                         </TLItem>
                     </ol>
                 </div>
-                <div className="SKILLSLEARNED w-full lg:w-1/2 h-full p-10 justify-center items-center">
+                <div className="SKILLSLEARNED w-full lg:w-1/2 h-full justify-center items-center">
                     <Skills/>
                 </div>
             </div>
