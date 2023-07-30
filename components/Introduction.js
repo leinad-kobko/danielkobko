@@ -13,7 +13,7 @@ import { useState } from "react";
 
 export default function Introduction() {
 
-    const [tooltip, setTooltip] = useState("Mail copied to clipboard.");
+    const [tooltip, setTooltip] = useState("Click to copy g-mail");
     const [tooltipOpacity, setTooltipOpacity] = useState(" opacity-0");
 
     const handleMail = () => {
@@ -58,15 +58,18 @@ export default function Introduction() {
                         <AiFillLinkedin className="hover:text-pink-800 hover:dark:text-pink-400 ease-in-out duration-200 hover:scale-[110%] hover:cursor-pointer"/>
                     </a>
                     <div className="relative">
-                        <p className={"absolute w-[12rem] bottom-[120%] left-[-150%] bg-slate-900 px-5 text-slate-100 text-sm rounded-md transition-opacity ease-in-out duration-200" + tooltipOpacity}>
+                        <p className={"absolute w-[12rem] text-center bottom-[120%] left-[-150%] bg-slate-900 px-5 text-slate-100 text-sm rounded-md transition-opacity ease-in-out duration-200" + tooltipOpacity}>
                             {tooltip}
                         </p>
                         <button 
                             onClick={() => {
                                 handleMail();
+                                setTooltip("G-mail copied to clipboard.");
+                            }}
+                            onMouseEnter={() => {
+                                setTooltip("Click to copy g-mail.")
                                 setTooltipOpacity(" opacity-100");
                             }}
-                            onMouseEnter={() => {}}
                             onMouseLeave={() => {
                                 setTooltipOpacity(" opacity-0");
                             }}
