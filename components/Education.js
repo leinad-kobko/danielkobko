@@ -91,7 +91,7 @@ export default function Education() {
                         >
                             <div className="DIALOG py-5 px-5 lg:px-10">
                                 <p className="text-lg text-blue-600">Achievements</p>
-                                <ul className="list-disc pl-5">
+                                <ul className="list-disc pl-5 text-black dark:text-slate-100">
                                     <li>{"Ontario Scholars Award (>80% in every year)"}</li>
                                     <li>{"Award for Grade 11 Computer Science"}</li>
                                     <li>{"Co-Founder of Computer Science Club"}</li>

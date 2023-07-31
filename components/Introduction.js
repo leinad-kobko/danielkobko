@@ -10,8 +10,21 @@ import {RiFileUserFill} from 'react-icons/ri';
 // Components
 import { BsChat } from "react-icons/bs";
 import { useState } from "react";
+import ButtonModal from "./ButtonModal";
 
 export default function Introduction() {
+
+    const [open, setOpen] = useState(false);
+    const [copyConfirm, setCopyConfirm] = useState(" hidden");
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+        setCopyConfirm(" hidden");
+    }
 
     const [tooltip, setTooltip] = useState("Click to copy g-mail");
     const [tooltipOpacity, setTooltipOpacity] = useState(" opacity-0");
@@ -63,19 +76,28 @@ export default function Introduction() {
                         </p>
                         <button 
                             onClick={() => {
-                                handleMail();
-                                setTooltip("G-mail copied to clipboard.");
-                            }}
-                            onMouseEnter={() => {
-                                setTooltip("Click to copy g-mail.")
-                                setTooltipOpacity(" opacity-100");
-                            }}
-                            onMouseLeave={() => {
-                                setTooltipOpacity(" opacity-0");
+                                handleClickOpen();
                             }}
                         >
                             <AiFillMail className="hover:text-pink-800 hover:dark:text-pink-400 hover:scale-[110%] ease-in-out duration-200 hover:cursor-pointer relative"/>
                         </button>
+                        <ButtonModal
+                            open={open}
+                            close={handleClose}
+                            imgref={"/icons/gmail.png"}
+                            title={"Dan\'s G-mail"}
+                        >
+                            <p className={"w-full text-center py-3 text-green-700" + copyConfirm}>Mail copied to clipboard</p>
+                            <button 
+                                onClick={()=>{
+                                    handleMail()
+                                    setCopyConfirm("")
+                                }}
+                                className="w-full text-center py-5 bg-gray-200 hover:bg-gray-300 dark:bg-gray-900 dark:hover:bg-gray-800 dark:text-slate-100"
+                            >
+                                Click to copy gmail to clipboard
+                            </button>
+                        </ButtonModal>
                     </div>
                     <a target="_blank" rel="noreferrer" href="/pdf/resume">
                         <RiFileUserFill className="hover:text-pink-800 hover:dark:text-pink-400 hover:scale-[110%] ease-in-out duration-200 hover:cursor-pointer"/>
