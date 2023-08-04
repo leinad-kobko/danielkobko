@@ -1,0 +1,75 @@
+import ThemeButton from "/components/ThemeButton"
+import Image from "next/image";
+import {RiMenu5Fill} from "react-icons/ri"
+
+function SmallNav() {
+    return (
+        <div className="absolute bottom-10 w-full flex justify-center">
+            <nav className="w-fit bg-gray-100 dark:bg-gray-900 drop-shadow-xl rounded-full flex">
+                <a><ThemeButton/></a>
+                <button className="p-5 text-2xl"><RiMenu5Fill/></button>
+            </nav>
+        </div>
+    );
+}
+
+function LargeNav({nav_elements}) {
+    return (
+        <div className="w-full flex pt-2">
+            <div className="w-full flex items-center ml-10">
+                <div className="LIGHT-LOGO w-16 h-16 relative dark:hidden">
+                    <Image
+                        src={"/icons/dk-black.png"}
+                        layout={"fill"}
+                        alt={"Daniel Kobko's personal logo"}
+                        className="object-contain"
+                    />
+                </div>
+                <div className="DARK-LOGO w-16 h-16 relative hidden dark:flex">
+                    <Image
+                        src={"/icons/dk.png"}
+                        layout={"fill"}
+                        alt={"Daniel Kobko's personal logo"}
+                        className="object-contain"
+                    />
+                </div>
+            </div>
+            <nav className="w-full flex justify-center gap-10 items-center">
+                {nav_elements.map((section) => {
+                    return (
+                    <a 
+                        key={section.text} 
+                        href={section.href}
+                        className="py-2 px-5 rounded-full hover:bg-gray-200 hover:dark:bg-gray-800"
+                        >
+                        {section.text}
+                    </a>)
+                })}
+            </nav>
+            <div className="w-full flex items-center justify-end mr-10">
+                <ThemeButton/>
+            </div>
+        </div>
+    );
+}
+
+export default function NavigationBar() {
+
+    const nav_elements = [
+        {text: "Introduction", href: "#top",},
+        {text: "Experience", href: "#Experience",},
+        {text: "Projects", href: "#Projects",},
+        {text: "Learning", href: "#Learning",},
+    ];
+
+    return (
+        <div className="z-40 w-full">
+            <div className="flex lg:hidden">
+                <SmallNav/>
+            </div>
+            <div className="hidden lg:flex flex-col bg-white dark:bg-[#121212] border-b border-gray-200 dark:border-gray-700 pb-2">
+                <LargeNav nav_elements={nav_elements}/>
+            </div>
+        </div>
+    );
+}
