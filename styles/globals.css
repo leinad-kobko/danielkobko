@@ -18,3 +18,28 @@ a {
 * {
   box-sizing: border-box;
 }
+
+[data-position='1'] {
+  /* transform: scale(1.5); */
+  transform: scale(1.75);
+  z-index: 1;
+}
+[data-position='2'] {
+  /* transform: scale(1.75); */
+  transform: scale(2);
+  z-index: 2;
+}
+[data-position='3'] {
+  /* transform: scale(2); */
+  transform: scale(1.75);
+  /* z-index: 3; */
+  z-index: 1;
+}
+[data-position='4'] {
+  transform: scale(1.75);
+  z-index: 2;
+}
+[data-position='5'] {
+  transform: scale(1.5);
+  z-index: 1;
+}

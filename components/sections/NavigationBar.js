@@ -5,7 +5,7 @@ import {RiMenu5Fill} from "react-icons/ri"
 function SmallNav() {
     return (
         <div className="absolute bottom-10 w-full flex justify-center">
-            <nav className="w-fit bg-gray-100 dark:bg-gray-900 drop-shadow-xl rounded-full flex">
+            <nav className="w-fit bg-gray-100 dark:bg-gray-900 drop-shadow-xl border border-gray-400 rounded-full flex">
                 <a><ThemeButton/></a>
                 <button className="p-5 text-2xl"><RiMenu5Fill/></button>
             </nav>
