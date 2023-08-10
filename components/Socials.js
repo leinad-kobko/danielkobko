@@ -47,9 +47,6 @@ export default function Socials() {
                 <AiFillLinkedin className="hover:text-blue-500 ease-in-out duration-200 hover:scale-[110%] hover:cursor-pointer"/>
             </a>
             <div className="relative">
-                <p className={"absolute w-[12rem] text-center bottom-[120%] left-[-150%] bg-slate-900 px-5 text-slate-100 text-sm rounded-md transition-opacity ease-in-out duration-200" + tooltipOpacity}>
-                    {tooltip}
-                </p>
                 <button 
                     onClick={() => {
                         handleClickOpen();

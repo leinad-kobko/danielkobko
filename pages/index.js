@@ -13,11 +13,11 @@ export default function NewHome() {
                 <div id="top">
                     <Introduction/>
                 </div>
+                <div id="Projects" className="w-full flex justify-center">
+                    <Projects/>
+                </div>
                 <div id="Experience">
                     <Experience/>
-                </div>
-                <div id="Projects">
-                    <Projects/>
                 </div>
                 <div id="Learning">
                     <Education/>

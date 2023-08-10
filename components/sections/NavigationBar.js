@@ -1,13 +1,54 @@
 import ThemeButton from "/components/ThemeButton"
 import Image from "next/image";
+import { useState } from "react";
 import {RiMenu5Fill} from "react-icons/ri"
 
-function SmallNav() {
+function SmallNav({nav_elements}) {
+    const [navWidth, setNavWidth] = useState("8rem")
+    const [navHeight, setNavHeight] = useState("0rem");
+    const [navVisible, setNavVisible] = useState("hidden");
+
+    function handleMenuOpen() {
+        setNavWidth("18rem");
+        setNavHeight("20rem");
+        setNavVisible("100%");
+    }
+    
+    function handleMenuClose() {
+        setNavWidth("8rem");
+        setNavHeight("0rem");
+        setNavVisible("0%")
+    }
+
     return (
         <div className="absolute bottom-10 w-full flex justify-center">
-            <nav className="w-fit bg-gray-100 dark:bg-gray-900 drop-shadow-xl border border-gray-400 rounded-full flex">
+            {navWidth === "18rem" ? <button onClick={() => handleMenuClose()} className="absolute -bottom-10 w-screen h-screen"/>:<></>}
+            <div className={"absolute bottom-10 w-[18rem] bg-gray-100 dark:bg-gray-900 overflow-hidden rounded-t-xl border border-gray-400"}
+                style={{
+                    width: navWidth,
+                    height: navHeight,
+                    // scale: navVisible,
+                    transition: "all .3s"
+                }}
+            >
+                <ul className="w-full h-full">
+                    {nav_elements.map((item) => {
+                        return (
+                            <li key={item.text} className="w-full hover:bg-black/20 text-center text-xl flex">
+                                <a onClick={()=>handleMenuClose()} className="w-full py-5" href={item.href}>{item.text}</a>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </div>
+            <nav className="bg-gray-100 dark:bg-gray-900 drop-shadow-xl border border-gray-400 rounded-full flex justify-center transition ease-in-out duration-500"
+                style={{
+                    width: navWidth,
+                    transition: "all .3s ease"
+                }}
+            >
                 <a><ThemeButton/></a>
-                <button className="p-5 text-2xl"><RiMenu5Fill/></button>
+                <button onClick={() => (navWidth === "18rem") ? handleMenuClose():handleMenuOpen()} className="p-5 text-2xl"><RiMenu5Fill/></button>
             </nav>
         </div>
     );
@@ -57,15 +98,15 @@ export default function NavigationBar() {
 
     const nav_elements = [
         {text: "Introduction", href: "#top",},
-        {text: "Experience", href: "#Experience",},
         {text: "Projects", href: "#Projects",},
+        {text: "Experience", href: "#Experience",},
         {text: "Learning", href: "#Learning",},
     ];
 
     return (
         <div className="z-40 w-full">
             <div className="flex lg:hidden">
-                <SmallNav/>
+                <SmallNav nav_elements={nav_elements}/>
             </div>
             <div className="hidden lg:flex flex-col bg-white dark:bg-[#121212] border-b border-gray-200 dark:border-gray-700 pb-2">
                 <LargeNav nav_elements={nav_elements}/>

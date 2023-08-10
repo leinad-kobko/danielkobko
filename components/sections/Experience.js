@@ -17,7 +17,7 @@ export default function Experience() {
                         className="w-1/2 text-center bg-blue-500 hover:bg-blue-600 text-white py-1 px-5 rounded-r-lg dark:border-neutral-600">Schedule</a>
                     </div>
                 </Certificate>
-                <Certificate
+                {/* <Certificate
                     place="Amazon Web Services"
                     name="Certified Cloud Practitioner Associate"
                     date="August 31, 2023"
@@ -25,7 +25,7 @@ export default function Experience() {
                     <div className="w-3/4 flex mt-2">
                         <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-1 px-5 rounded-lg">View Certificate</button>
                     </div>
-                </Certificate>
+                </Certificate> */}
             </div>
         </div>
     );
