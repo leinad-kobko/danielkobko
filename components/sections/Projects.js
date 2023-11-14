@@ -8,9 +8,9 @@ export default function Projects() {
         {
             colour: "pink",
             position: 1,
-            name: "KOKO\'s Drone Services",
-            date: "June 13, 2023",
-            pageref: "https://kokodronesservices.vercel.app",
+            name: "Bimota Limos",
+            date: "November 13, 2023",
+            pageref: "https://bimota-limos.vercel.app",
             imgref: "/icons/underconstruction.jpg"
         },
         {
