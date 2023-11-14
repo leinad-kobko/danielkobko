@@ -2,6 +2,7 @@ import {AiOutlineLeft, AiOutlineRight} from "react-icons/ai"
 import ProjectCard from "../ProjectCard";
 import { useState, useEffect } from "react";
 
+
 export default function Projects() {
 
     const initial_list = [
